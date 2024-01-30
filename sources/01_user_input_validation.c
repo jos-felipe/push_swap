@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 17:33:47 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:34:55 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void ft_user_input_validation(int argc, char *argv[], t_list **trashman)
 	return ;
 }
 
-#include <stdio.h>
 void	ft_int(int argc, char *argv[], t_list **trashman)
 {
 	int	*list;
