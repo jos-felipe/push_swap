@@ -6,13 +6,13 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/01/30 12:07:41 by josfelip         ###   ########.fr        #
+#    Updated: 2024/01/30 16:03:20 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 DEBUG_NAME = push_swap_debug
-CFLAGS = 
+CFLAGS = -g3
 # CFLAGS = -Wall -Werror -Wextra
 DFLAGS = -g3
 
@@ -36,9 +36,7 @@ OBJ_PATH = ./obj/
 DEBUG_OBJ_PATH = ./obj_debug/
 TESTS_PATH = ./tests/
 SOURCES_PATH = ./sources/
-SOURCES = \
-			00_main.c \
-			01_user_input_validation.c
+SOURCES = 00_main.c  01_user_input_validation.c  99_utils.c
 MANDATORY_SOURCES = $(addprefix $(SOURCES_PATH), $(SOURCES))
 
 ifdef WITH_DEBUG
