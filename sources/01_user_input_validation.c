@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 17:18:49 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:33:47 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,5 @@ void	ft_int(int argc, char *argv[], t_list **trashman)
 			}
 		}
 		i++;
-		printf("%d ", list[i - 2]);
 	}	
-	printf("\n");
 }
