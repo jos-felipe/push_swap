@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 12:07:34 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/01/30 13:06:42 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+
+
 
 // 01_user_input_validation.c
 int ft_user_input_validation(int argc, char *argv[]);
