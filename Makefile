@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/01/30 16:03:20 by josfelip         ###   ########.fr        #
+#    Updated: 2024/01/30 16:36:39 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ debug:
 $(OBJ_PATH):
 	mkdir -p $(OBJ_PATH)
 
-$(NAME):
+$(NAME): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) -L $(LIB_PATH) -L $(LIB_PRINTF_PATH) -lft -lftprintf
 	@echo $(CYAN)" ----------------------------------------------"$(COLOR_LIMITER)
 	@echo $(CYAN)"| PUSH_SWAP executable was created successfully!! |"$(COLOR_LIMITER)

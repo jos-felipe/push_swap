@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 16:06:14 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:18:49 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void ft_user_input_validation(int argc, char *argv[], t_list **trashman)
 	return ;
 }
 
+#include <stdio.h>
 void	ft_int(int argc, char *argv[], t_list **trashman)
 {
 	int	*list;
@@ -37,13 +38,17 @@ void	ft_int(int argc, char *argv[], t_list **trashman)
 	{
 		
 		if (!ft_is_zero(argv[i]))
+		{
+			
 			list[i-1] = ft_atoi(argv[i]);
 			if (list[i-1] == 0)
 			{
 				ft_putstr_fd("Error\n", STDERR_FILENO);
 				ft_safe_exit(1, trashman);
 			}
+		}
 		i++;
-		ft_printf("%d", list[i-1]);
+		printf("%d ", list[i - 2]);
 	}	
+	printf("\n");
 }
