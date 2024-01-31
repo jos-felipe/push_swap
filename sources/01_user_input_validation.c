@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 17:36:51 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/31 17:48:18 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_user_input_validation(int argc, char *argv[], t_bst **bst)
 		exit(1);
 	ft_int(argc, argv, bst);
 	bst_in_order(*bst);
-	bst_free_all(*bst);
+	bst_free_all_ps(*bst);
 	return ;
 }
 
@@ -36,12 +36,12 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 	{	
 		nbr = ft_atol(argv[i]);
 		ft_int_overflow(nbr);
-		(*bst) = bst_insert_ps((*bst), (int)nbr, &was_inserted);
+		(*bst) = bst_insert_ps(bst, *bst, (int)nbr, &was_inserted);
 		i++;
 	}	
 }
 
-t_bst	*bst_insert_ps(t_bst *node, int insert_key, bool *was_inserted)
+t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_inserted)
 {
 	*was_inserted = false;
 	if (node == NULL)
@@ -51,16 +51,26 @@ t_bst	*bst_insert_ps(t_bst *node, int insert_key, bool *was_inserted)
 	}
 	if (insert_key == node->key)
 	{
-		ft_putstr_fd("Error\n", STDERR_FILENO);
+		ft_putstr_fd("Error\n", 2);
+		bst_free_all_ps(*head);
 		exit(1);
 	}
 	else if (insert_key > node->key)
 	{
-		node->right_child = bst_insert_ps(node->right_child, insert_key, was_inserted);
+		node->right_child = bst_insert_ps(head, node->right_child, insert_key, was_inserted);
 	}
 	else if (insert_key < node->key)
 	{
-		node->left_child = bst_insert_ps(node->left_child, insert_key, was_inserted);
+		node->left_child = bst_insert_ps(head, node->left_child, insert_key, was_inserted);
 	}
 	return (node);
+}
+
+void	bst_free_all_ps(t_bst *node)
+{
+	if (node == NULL)
+		return ;
+	bst_free_all_ps(node->left_child);
+	bst_free_all_ps(node->right_child);
+	free(node);
 }
