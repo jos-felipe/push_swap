@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_main.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 10:23:00 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/23 10:21:03 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 09:58:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "functions.h"
 
-int main(int argc, char *argv[])
+void	ft_bzero(void *s, size_t n)
 {
-	t_list	*trashman;
-	
-	trashman = NULL;
-	ft_user_input_validation(argc, argv, &trashman);
-	ft_safe_exit(0, &trashman);
+	ft_memset(s, '\0', n);
 }

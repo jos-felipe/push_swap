@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_main.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 10:23:00 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/08/02 09:36:07 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 09:58:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "functions.h"
 
-int main(int argc, char *argv[])
+int	ft_putchar_fd(char c, int fd)
 {
-	t_list	*trashman;
-	
-	trashman = NULL;
-	ft_user_input_validation(argc, argv, &trashman);
-	ft_safe_exit(0, &trashman);
+	write(fd, &c, 1);
+	return (1);
 }

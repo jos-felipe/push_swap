@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_main.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 10:23:00 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/23 14:21:45 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 09:58:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "functions.h"
 
-int main(int argc, char *argv[])
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	t_list	*trashman;
-	
-	trashman = NULL;
-	ft_user_input_validation(argc, argv, &trashman);
-	ft_safe_exit(0, &trashman);
+	unsigned char	*temp1;
+	unsigned char	*temp2;
+
+	temp1 = dst;
+	temp2 = (unsigned char *)src;
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	if (dst > src)
+		while (len--)
+			temp1[len] = temp2[len];
+	return (dst);
 }
