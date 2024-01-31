@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 16:00:56 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/31 18:17:38 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,11 @@ void	ft_xt_go_horse(char *msg)
 	exit(1);
 }
 
-void	ft_error(t_list **trashman)
+void	ft_error(t_bst **head)
 {
-	ft_putstr_fd("Error\n", STDERR_FILENO);
-	ft_safe_exit(1, trashman);
+	ft_putstr_fd("Error\n", 2);
+	bst_free_all(*head);
+	exit(1);
 }
 
 void	ft_int_overflow(long nbr)
@@ -86,4 +87,15 @@ void	ft_int_overflow(long nbr)
 		ft_putstr_fd("Error\n", STDERR_FILENO);
 		exit(1);
 	}
+}
+
+int	only_digit(char *str)
+{
+	while(*str)
+	{
+		if (!ft_isdigit(*str))
+			return (0);
+		str++;
+	}
+	return (1);
 }

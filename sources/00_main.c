@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 16:05:12 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/31 18:00:17 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int main(int argc, char *argv[])
 {
-	// t_list	*trashman;
 	t_bst	*bst;
 	
-	//trashman = NULL;
 	bst = NULL;
 	ft_user_input_validation(argc, argv, &bst);
-	//ft_safe_exit(0, &trashman);
+	bst_free_all(bst);
 }
