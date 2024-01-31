@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 17:34:55 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:59:42 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,26 @@ void ft_user_input_validation(int argc, char *argv[], t_list **trashman)
 
 void	ft_int(int argc, char *argv[], t_list **trashman)
 {
-	int	*list;
-	int	i;
+	int		*list;
+	int		i;
+	long	nbr;
 
 	list = (int *)calloc(sizeof(int), argc - 1);
 	if (list == NULL)
-	{
-		ft_printf("Memory allocation failed");
-		exit(1);
-	}
+		ft_xt_go_horse("Memory allocation failed");
 	*trashman = ft_lstnew(list);
 	i = 1;
 	while (i < argc)
-	{
-		
+	{	
 		if (!ft_is_zero(argv[i]))
 		{
-			
-			list[i-1] = ft_atoi(argv[i]);
+			nbr = ft_atol(argv[i]);
+			ft_int_overflow(nbr, trashman);
+			list[i-1] = (int)nbr;
 			if (list[i-1] == 0)
-			{
-				ft_putstr_fd("Error\n", STDERR_FILENO);
-				ft_safe_exit(1, trashman);
-			}
+				ft_error(trashman);
 		}
 		i++;
 	}	
 }
+

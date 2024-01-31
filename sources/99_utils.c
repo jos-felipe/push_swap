@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 15:59:36 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:59:49 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,48 @@ void	ft_safe_exit(int status, t_list **trashman)
 {
 	free_heap(*trashman);
 	exit(status);
+}
+long	ft_atol(const char *nptr)
+{
+	long	sign;
+	long	nb;
+
+	sign = 1;
+	nb = 0;
+	while (*nptr == '\t' || *nptr == '\n' || *nptr == '\v' || \
+			*nptr == '\f' || *nptr == '\r' || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+	{
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
+	}
+	while (ft_isdigit(*nptr))
+	{
+		nb = (*nptr - '0') + (nb * 10);
+		nptr++;
+	}
+	return (nb * sign);
+}
+
+void	ft_xt_go_horse(char *msg)
+{
+	ft_putstr_fd(msg, STDERR_FILENO);
+	exit(1);
+}
+
+void	ft_error(t_list **trashman)
+{
+	ft_putstr_fd("Error\n", STDERR_FILENO);
+	ft_safe_exit(1, trashman);
+}
+
+void	ft_int_overflow(long nbr, t_list **trashman)
+{
+	if (nbr > INT_MAX || nbr < INT_MIN)
+	{
+		ft_putstr_fd("Error\n", STDERR_FILENO);
+		ft_safe_exit(1, trashman);
+	}
 }
