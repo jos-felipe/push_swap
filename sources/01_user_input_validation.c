@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 20:59:42 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:59:34 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void ft_user_input_validation(int argc, char *argv[], t_list **trashman)
+void ft_user_input_validation(int argc, char *argv[], t_list **trashman, t_bst **bst)
 {
+	int	*list;
+	
 	if (argc == 1)
 		exit(1);
-	ft_int(argc, argv, trashman);
+	list = ft_int(argc, argv, trashman);
+	fill_bst(argc, bst, list);
+	bst_in_order(*bst);
+	bst_free_all(*bst);
 	return ;
 }
 
-void	ft_int(int argc, char *argv[], t_list **trashman)
+int	*ft_int(int argc, char *argv[], t_list **trashman)
 {
 	int		*list;
 	int		i;
@@ -43,5 +48,19 @@ void	ft_int(int argc, char *argv[], t_list **trashman)
 		}
 		i++;
 	}	
+	return (list);
 }
 
+void	fill_bst(int argc, t_bst **bst, int *list)
+{
+	int		i;
+	bool	was_inserted;
+
+	i = 0;
+	was_inserted = false; 
+	while (i < argc - 1)
+	{
+		(*bst) = bst_insert((*bst), list[i], &was_inserted);
+		i++;
+	}
+}
