@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/27 13:47:03 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:06:45 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,13 @@ t_bst	*bst_delete_node(t_bst *node, int delete_key, bool *was_deleted)
 			return (left_right_child(node, was_deleted));
 	}		
 	return (node);
+}
+
+void	bst_free_all(t_bst *node)
+{
+	if (node == NULL)
+		return ;
+	bst_free_all(node->left_child);
+	bst_free_all(node->right_child);
+	free(node);
 }
