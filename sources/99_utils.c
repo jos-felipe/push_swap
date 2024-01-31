@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   99_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/30 20:59:49 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/01/31 16:00:56 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ void	ft_error(t_list **trashman)
 	ft_safe_exit(1, trashman);
 }
 
-void	ft_int_overflow(long nbr, t_list **trashman)
+void	ft_int_overflow(long nbr)
 {
 	if (nbr > INT_MAX || nbr < INT_MIN)
 	{
 		ft_putstr_fd("Error\n", STDERR_FILENO);
-		ft_safe_exit(1, trashman);
+		exit(1);
 	}
 }
