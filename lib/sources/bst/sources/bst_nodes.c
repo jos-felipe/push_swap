@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_node.c                                      :+:      :+:    :+:   */
+/*   bst_nodes.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/31 11:06:45 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:38:32 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_bst	*bst_create_node(int new_key)
 
 	new_node = calloc(1, sizeof(t_bst));
 	new_node->key = new_key;
+	new_node->index = 0;
 	new_node->right_child = NULL;
 	new_node->left_child = NULL;
 	return (new_node);

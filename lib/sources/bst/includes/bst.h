@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bst.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:17:51 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/31 11:07:28 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:34:32 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_bst
 {
 	int				key;
+	int				index;
 	struct s_bst	*left_child;
 	struct s_bst	*right_child;
 }		t_bst;
