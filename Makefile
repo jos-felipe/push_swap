@@ -6,7 +6,7 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/01/31 10:16:42 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/01 18:43:16 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ endif
 
 OBJECTS = $(addprefix $(OBJ_PATH), $(SOURCES:%.c=%.o))
 
-all: $(NAME)
+all: libft $(OBJ_PATH) $(NAME)
 
 libft:
 	@make --directory=$(LIB_PATH) --no-print-directory
@@ -61,7 +61,7 @@ debug:
 $(OBJ_PATH):
 	mkdir -p $(OBJ_PATH)
 
-$(NAME): libft $(OBJ_PATH) $(OBJECTS)
+$(NAME): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) -L $(LIB_PATH) -lft
 	@echo $(CYAN)" ----------------------------------------------"$(COLOR_LIMITER)
 	@echo $(CYAN)"| PUSH_SWAP executable was created successfully!! |"$(COLOR_LIMITER)
