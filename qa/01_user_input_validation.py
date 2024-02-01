@@ -12,7 +12,7 @@ WHITE = "\033[37;1;4m"
 COLOR_LIMITER = "\033[0m"
 
 ordered_list = []
-ordered_range = range(1, 11, 1)
+ordered_range = range(-1, 11, 1)
 for n in ordered_range:
 	ordered_list.append(str(n))
 

@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/01/31 18:17:38 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/01 18:35:43 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ void	ft_int_overflow(long nbr)
 
 int	only_digit(char *str)
 {
+	if (*str == '-' || *str == '+')
+		str++;
 	while(*str)
 	{
 		if (!ft_isdigit(*str))
