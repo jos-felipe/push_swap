@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/01 19:36:31 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:38:02 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list_push
 {
 	int				value;
 	int				index;
-	struct s_list	*next;
+	struct s_list_push	*next;
 }	t_list_push;
 
 
@@ -32,8 +32,13 @@ void	ft_int(int argc, char *argv[], t_bst **bst);
 t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_inserted);
 
 // 02_indexing.c
-void	ft_indexing(t_bst **bst, t_list **a);
-void	ft_fill_stack(t_list **a, int argc, char *argv);
+void	ft_fill_stack(t_list_push **a, int argc, char *argv[]);
+void	ft_bst_indexing(t_bst **bst, t_list_push **a);
+void	bst_in_order_static(t_bst *node, int index);
+t_list_push	*push_lstnew(int nbr);
+void	push_lstadd_back(t_list_push **lst, t_list_push *new);
+t_list_push	*push_lstlast(t_list_push *lst);
+void	bst_in_order_print_index(t_bst *node);
 
 // 99_utils.c
 int		ft_is_zero(char *str);
@@ -43,6 +48,6 @@ long	ft_atol(const char *nptr);
 void	ft_xt_go_horse(char *str);
 void	ft_error(t_bst **head);
 void	ft_int_overflow(long nbr);
-int	only_digit(char *str);
+int		only_digit(char *str);
 
 #endif

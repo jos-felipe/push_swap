@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/01 19:38:03 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:21:23 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
 	a = NULL;
 	b = NULL;
 	ft_user_input_validation(argc, argv, &bst);
-	ft_indexing(&bst, &a);
-	bst_in_order(bst);
+	ft_fill_stack(&a, argc, argv);
+	ft_bst_indexing(&bst, &a);
+	//bst_in_order(bst);
+	bst_in_order_print_index(bst);
 	bst_free_all(bst);
 }

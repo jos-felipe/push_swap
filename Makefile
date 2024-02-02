@@ -6,7 +6,7 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/01 18:43:16 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/02 11:56:44 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OBJ_PATH = ./obj/
 DEBUG_OBJ_PATH = ./obj_debug/
 TESTS_PATH = ./tests/
 SOURCES_PATH = ./sources/
-SOURCES = 00_main.c  01_user_input_validation.c  99_utils.c
+SOURCES = $(shell find sources/ -name "*.c" | cut -d/ -f2)
 MANDATORY_SOURCES = $(addprefix $(SOURCES_PATH), $(SOURCES))
 
 ifdef WITH_DEBUG
