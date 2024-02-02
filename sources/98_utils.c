@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/02 12:47:10 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/02 15:17:13 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	push_lstprintf(t_list_push *lst)
 	{
 		value = lst->value;
 		index = lst->index;
-		ft_printf("value=%d; index=%d\n", value, index);
+		ft_printf("%d ", index);
 		lst = lst->next;
 	}
 }

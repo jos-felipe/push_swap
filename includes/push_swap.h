@@ -6,12 +6,14 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/02 12:54:15 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/02 15:31:54 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# define DEBUG 0
 
 # include "../lib/includes/libft.h"
 # include <stdlib.h>
