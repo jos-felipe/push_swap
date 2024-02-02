@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:05:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/02 11:40:32 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:12:30 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,30 @@ void	ft_fill_stack(t_list_push **a, int argc, char *argv[])
 		push_lstadd_back(a, push_lstnew(nbr));
 		i++;
 	}	
+}
+
+int	push_bst_is_member(t_bst *node, int find_key)
+{
+	if (node == NULL)
+		return (0);
+	else if (find_key > node->key)
+		return (push_bst_is_member(node->right_child, find_key));
+	else if (find_key < node->key)
+		return (push_bst_is_member(node->left_child, find_key));
+	else
+		return (node->index);
+}
+
+void	ft_lst_indexing(t_list_push *a, t_bst *bst)
+{
+	int	key;
+	
+	while (a)
+	{
+		key = a->value;
+		a->index = push_bst_is_member(bst, key);
+		a = a->next;
+	}
 }
 
 void	ft_bst_indexing(t_bst **bst, t_list_push **a)

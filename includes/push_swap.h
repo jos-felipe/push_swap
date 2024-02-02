@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/02 11:38:02 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:54:15 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ t_list_push	*push_lstnew(int nbr);
 void	push_lstadd_back(t_list_push **lst, t_list_push *new);
 t_list_push	*push_lstlast(t_list_push *lst);
 void	bst_in_order_print_index(t_bst *node);
+void	ft_lst_indexing(t_list_push *a, t_bst *bst);
+
+// 98_utils.c
+void	push_lstprintf(t_list_push *lst);
 
 // 99_utils.c
 int		ft_is_zero(char *str);

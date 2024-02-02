@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/02 11:39:31 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:47:10 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list_push	*push_lstnew(int nbr)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->value = nbr;
+	new_node->index = 0;
 	new_node->next = NULL;
 	return (new_node);
 }
@@ -44,4 +45,18 @@ t_list_push	*push_lstlast(t_list_push *lst)
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
+}
+
+void	push_lstprintf(t_list_push *lst)
+{
+	int	value;
+	int	index;
+	
+	while (lst)
+	{
+		value = lst->value;
+		index = lst->index;
+		ft_printf("value=%d; index=%d\n", value, index);
+		lst = lst->next;
+	}
 }
