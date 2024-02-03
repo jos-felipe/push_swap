@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/03 13:13:25 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/03 18:32:25 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	push_lstclear(t_list_push **lst);
 long	ft_atol(const char *nptr);
 void	ft_xt_go_horse(char *str);
 void	ft_error(t_bst **head);
-void	ft_int_overflow(long nbr);
+int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
 
 #endif

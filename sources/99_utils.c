@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   99_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/03 13:18:23 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/03 18:54:17 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ void	ft_safe_exit(	int status, \
 						t_list_push **b, \
 						t_bst **bst)
 {
-	if (*a != NULL)
+	if (a != NULL)
 		push_lstclear(a);
-	if (*b != NULL)
+	if (b != NULL)
 		push_lstclear(b);
-	if (*bst != NULL)
+	if (bst != NULL)
 		bst_free_all(*bst);
+	if (status)
+		ft_putstr_fd("Error\n", STDERR_FILENO);
 	exit(status);
 }
 
@@ -102,13 +104,9 @@ void	ft_error(t_bst **head)
 	exit(1);
 }
 
-void	ft_int_overflow(long nbr)
+int	ft_int_overflow(long nbr)
 {
-	if (nbr > INT_MAX || nbr < INT_MIN)
-	{
-		ft_putstr_fd("Error\n", STDERR_FILENO);
-		exit(1);
-	}
+	return (nbr > INT_MAX || nbr < INT_MIN);
 }
 
 int	only_digit(char *str)
