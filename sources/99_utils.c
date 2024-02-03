@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/01 18:35:43 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/03 13:18:23 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,33 @@ void	free_heap(t_list *lst_memory)
 	}
 }
 
-void	ft_safe_exit(int status, t_list **trashman)
+void	ft_safe_exit(	int status, \
+						t_list_push **a, \
+						t_list_push **b, \
+						t_bst **bst)
 {
-	free_heap(*trashman);
+	if (*a != NULL)
+		push_lstclear(a);
+	if (*b != NULL)
+		push_lstclear(b);
+	if (*bst != NULL)
+		bst_free_all(*bst);
 	exit(status);
 }
+
+void	push_lstclear(t_list_push **lst)
+{
+	t_list_push	*aux;
+
+	while (*lst)
+	{
+		aux = (*lst)->next;
+		free(*lst);
+		*lst = aux;
+	}
+}
+
+
 long	ft_atol(const char *nptr)
 {
 	long	sign;

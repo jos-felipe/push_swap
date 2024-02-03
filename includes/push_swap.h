@@ -6,14 +6,16 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/02 15:31:54 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/03 13:13:25 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# define DEBUG 0
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
 
 # include "../lib/includes/libft.h"
 # include <stdlib.h>
@@ -49,7 +51,11 @@ void	push_lstprintf(t_list_push *lst);
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
-void	ft_safe_exit(int status, t_list **trashman);
+void	ft_safe_exit(	int status, \
+						t_list_push **a, \
+						t_list_push **b, \
+						t_bst **bst);
+void	push_lstclear(t_list_push **lst);
 long	ft_atol(const char *nptr);
 void	ft_xt_go_horse(char *str);
 void	ft_error(t_bst **head);

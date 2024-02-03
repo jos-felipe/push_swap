@@ -6,14 +6,14 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/02 15:56:21 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/03 12:15:54 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 DEBUG_NAME = push_swap_debug
 CFLAGS = -g3
-# CFLAGS = -Wall -Werror -Wextra
+#CFLAGS = -Wall -Werror -Wextra
 DFLAGS = -g3
 
 # Paths for libraries
@@ -43,6 +43,14 @@ ifdef WITH_DEBUG
   NAME = $(DEBUG_NAME)
   CFLAGS = $(DFLAGS)
   OBJ_PATH = ./obj_debug/
+endif
+
+ifdef DEBUG
+	ifeq ($(DEBUG),1)
+        CFLAGS += -D DEBUG=1
+	else ifeq ($(DEBUG),2)
+        CFLAGS = -D DEBUG=2
+	endif
 endif
 
 OBJECTS = $(addprefix $(OBJ_PATH), $(SOURCES:%.c=%.o))

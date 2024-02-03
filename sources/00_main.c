@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/02 15:56:04 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/03 13:07:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,15 @@ int main(int argc, char *argv[])
 	a = NULL;
 	b = NULL;
 	ft_user_input_validation(argc, argv, &bst);
+	if (DEBUG == 1)
+		ft_safe_exit(1, &a, &b, &bst);
 	ft_fill_stack(&a, argc, argv);
 	ft_bst_indexing(&bst, &a);
-	//bst_in_order(bst);
-	//bst_in_order_print_index(bst);
 	ft_lst_indexing(a, bst);
-	push_lstprintf(a);
-	bst_free_all(bst);
+	if (DEBUG == 2)
+	{
+		push_lstprintf(a);
+		ft_safe_exit(1, &a, &b, &bst);
+	}
+	ft_safe_exit(1, &a, &b, &bst);
 }
