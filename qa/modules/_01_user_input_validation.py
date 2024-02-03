@@ -2,7 +2,7 @@ import subprocess
 
 def user_input():
 	cmd0 = "../push_swap"
-	valgring = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
+	valgrind = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
 	substring = "All heap blocks were freed -- no leaks are possible"
 
 	# Int min and max
@@ -44,7 +44,7 @@ def user_input():
 	for arg in args:
 		arg.insert(0, cmd0)
 		output = subprocess.run(arg, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-		arg[:0] = valgring
+		arg[:0] = valgrind
 		output_val = subprocess.run(arg, stderr=subprocess.PIPE, text=True)
 		stderr_list.append(output.stderr)
 		stdout_list.append(output.stdout)

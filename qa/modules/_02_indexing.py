@@ -2,7 +2,7 @@ import subprocess
 
 def indexing():
 	cmd0 = "../push_swap"
-	valgring = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
+	valgrind = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
 	substring = "All heap blocks were freed -- no leaks are possible"
 
 	# Colors Definition 
@@ -21,6 +21,7 @@ def indexing():
 
 	# Runing cmd and getting output
 	output = subprocess.run(unordered_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+	unordered_list[:0] = valgrind
 	output_val = subprocess.run(unordered_list, stderr=subprocess.PIPE, text=True)
 
 	# Printing test check

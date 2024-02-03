@@ -10,7 +10,6 @@ print("MODULE_1")
 make = ["make", "DEBUG=1", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 _01_user_input_validation.user_input()
-
 subprocess.run(fclean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 print("\n")
 
