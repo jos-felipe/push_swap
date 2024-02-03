@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import subprocess
 
 from modules import _01_user_input_validation
