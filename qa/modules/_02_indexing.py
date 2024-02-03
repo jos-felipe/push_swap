@@ -2,6 +2,8 @@ import subprocess
 
 def indexing():
 	cmd0 = "../push_swap"
+	valgring = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
+	substring = "All heap blocks were freed -- no leaks are possible"
 
 	# Colors Definition 
 	GREEN = "\033[32;1m"
@@ -19,10 +21,16 @@ def indexing():
 
 	# Runing cmd and getting output
 	output = subprocess.run(unordered_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+	output_val = subprocess.run(unordered_list, stderr=subprocess.PIPE, text=True)
 
 	# Printing test check
 	print(f"{battery.upper()}")
 	if ((output.stdout == ranking_list)):
-		print(f"{GREEN}1. OK\n{COLOR_LIMITER}")
+		print(f"{GREEN}1. OK{COLOR_LIMITER}")
 	else:
-		print(f"{RED}1. KO\n{COLOR_LIMITER}")
+		print(f"{RED}1. KO{COLOR_LIMITER}")
+	string = output_val.stderr
+	if substring in string:
+		print(f"{GREEN}   MOK\n{COLOR_LIMITER}")
+	else:
+		print(f"{RED}   MKO\n{COLOR_LIMITER}")
