@@ -55,3 +55,7 @@ dkms.conf
 
 # 42 material
 *.pdf
+
+# Python pycache
+__pycache__/
+*.pyc
