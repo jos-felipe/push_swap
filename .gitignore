@@ -58,3 +58,7 @@ dkms.conf
 # Python pycache
 __pycache__/
 *.pyc
+
+# Environment
+.vscode
+
