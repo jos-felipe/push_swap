@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/03 18:32:25 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/05 16:57:36 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,21 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+
+enum operations
+{
+	SA,
+	SB,
+	SS,
+	RA,
+	RB,
+	RR,
+	RRA,
+	RRB,
+	RRR,
+	PA,
+	PB
+};
 
 typedef struct s_list_push
 {
@@ -44,6 +59,15 @@ void	push_lstadd_back(t_list_push **lst, t_list_push *new);
 t_list_push	*push_lstlast(t_list_push *lst);
 void	bst_in_order_print_index(t_bst *node);
 void	ft_lst_indexing(t_list_push *a, t_bst *bst);
+
+// 03_moves.c
+void		push_baby_moves(t_list_push **a, t_list_push **b);
+void		push_gateway(int op, t_list_push **a, t_list_push **b);
+void		push_do_sx(t_list_push **stack, char *sx);
+void		push_lstprintf_moves(t_list_push *lst);
+void		push_do_rrx(t_list_push **stack, char *rrx);
+// t_list_push	*push_lstlast(t_list_push *lst);
+t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 98_utils.c
 void	push_lstprintf(t_list_push *lst);
