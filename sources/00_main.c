@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/05 11:01:45 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/05 12:34:19 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 	if (DEBUG == 2) // _02_indexing.py
 	{
 		push_lstprintf(a);
-		ft_safe_exit(1, &a, &b, &bst);
+		ft_safe_exit(0, &a, &b, &bst);
 	}
 	
-	ft_safe_exit(1, &a, &b, &bst);
+	ft_safe_exit(0, &a, &b, &bst);
 }
