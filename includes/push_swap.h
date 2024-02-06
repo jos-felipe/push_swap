@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 16:14:11 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:58:24 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ void		push_do_rr(t_list_push **src, t_list_push **dest, char *rr);
 void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
-// 98_utils.c
-void	push_lstprintf(t_list_push *lst);
+// 04_pre_sort.c
+
 
 // 99_utils.c
 int		ft_is_zero(char *str);
@@ -91,4 +91,9 @@ void	ft_error(t_bst **head);
 int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
 
+// 98_utils.c
+void	push_lstprintf(t_list_push *lst);
+
+// 96_utils.c
+int		push_is_sorted(t_list_push *node);
 #endif

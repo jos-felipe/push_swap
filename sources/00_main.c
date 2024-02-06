@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/05 14:27:07 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:50:06 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	if (DEBUG == 1) // _01_user_input_validation.py
 		ft_safe_exit(0, &a, &b, &bst);
 	ft_fill_stack(&a, argc, argv);
+	if (push_is_sorted(a))
+		ft_safe_exit(0, &a, &b, &bst);
 	ft_bst_indexing(&bst, &a);
 	ft_lst_indexing(a, bst);
 	if (DEBUG == 2) // _02_indexing.py
