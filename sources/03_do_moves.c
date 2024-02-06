@@ -12,7 +12,8 @@ void	push_do_sx(t_list_push **stack, char *sx)
 	*stack = node_1;
 	(*stack)->next = node_2;
 	(*stack)->next->next = node_3;
-	ft_printf("%s\n", sx);
+	if (sx != NULL)
+		ft_printf("%s\n", sx);
 }
 
 void	push_do_rrx(t_list_push **stack, char *rrx)
@@ -27,7 +28,8 @@ void	push_do_rrx(t_list_push **stack, char *rrx)
 	*stack = node_1;
 	(*stack)->next = node_2;
 	node_n->next = NULL;
-	ft_printf("%s\n", rrx);
+	if (rrx != NULL)
+		ft_printf("%s\n", rrx);
 }
 
 void	push_do_rx(t_list_push **stack, char *rx)
@@ -69,4 +71,18 @@ void	push_do_rr(t_list_push **a, t_list_push **b, char *rr)
 	push_do_rx(a, NULL);
 	push_do_rx(b, NULL);
 	ft_printf("%s\n", rr);
+}
+
+void	push_do_rrr(t_list_push **a, t_list_push **b, char *rrr)
+{
+	push_do_rrx(a, NULL);
+	push_do_rrx(b, NULL);
+	ft_printf("%s\n", rrr);
+}
+
+void	push_do_ss(t_list_push **a, t_list_push **b, char *ss)
+{
+	push_do_sx(a, NULL);
+	push_do_sx(b, NULL);
+	ft_printf("%s\n", ss);
 }

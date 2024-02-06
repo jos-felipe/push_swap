@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 12:49:01 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:14:11 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,9 @@ void		push_lstadd_front(t_list_push **lst, t_list_push *new);
 void		push_do_rrx(t_list_push **stack, char *rrx);
 void		push_do_rx(t_list_push **stack, char *rx);
 void		push_do_px(t_list_push **src, t_list_push **dest, char *px);
+void		push_do_rrr(t_list_push **a, t_list_push **b, char *rrr);
 void		push_do_rr(t_list_push **src, t_list_push **dest, char *rr);
+void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 98_utils.c

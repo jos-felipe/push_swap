@@ -32,8 +32,12 @@ void	push_baby_moves(t_list_push **a, t_list_push **b)
 	push_gateway(RR, a, b);
 	push_lstprintf_moves(*a);
 	push_lstprintf_moves(*b);
-	// push_gateway(RRR, a, b);
-	// push_gateway(SS, a, b);
+	push_gateway(RRR, a, b);
+	push_lstprintf_moves(*a);
+	push_lstprintf_moves(*b);
+	push_gateway(SS, a, b);
+	push_lstprintf_moves(*a);
+	push_lstprintf_moves(*b);
 }
 
 void	push_gateway(int op, t_list_push **a, t_list_push **b)
@@ -42,8 +46,8 @@ void	push_gateway(int op, t_list_push **a, t_list_push **b)
 		push_do_sx(a, "sa");
 	else if (op == SB)
 		push_do_sx(b, "sb");
-	// else if (op == SS)
-	// 	push_do_ss(a, b);
+	else if (op == SS)
+		push_do_ss(a, b,"ss");
 	else if (op == RA)
 		push_do_rx(a, "ra");
 	else if (op == RB)
@@ -54,8 +58,8 @@ void	push_gateway(int op, t_list_push **a, t_list_push **b)
 		push_do_rrx(a, "rra");
 	else if (op == RRB)
 		push_do_rrx(b, "rrb");
-	// else if (op == RRR)
-	// 	push_do_rrr(a, b);
+	else if (op == RRR)
+		push_do_rrr(a, b, "rrr");
 	else if (op == PA)
 		push_do_px(b, a, "pa");
 	else if (op == PB)
