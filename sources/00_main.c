@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 16:50:06 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/06 19:27:07 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ int main(int argc, char *argv[])
 	if (DEBUG == 3) // _03_moves.py
 	{
 		push_baby_moves(&a, &b);
+		ft_safe_exit(0, &a, &b, &bst);
+	}
+	if (DEBUG == 4) // _04_pre_sort.py
+	{
+		push_lstprintf(a);
+		push_lstprintf(b);
 		ft_safe_exit(0, &a, &b, &bst);
 	}
 	ft_safe_exit(0, &a, &b, &bst);

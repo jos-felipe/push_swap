@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
+#    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/06 12:59:45 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/06 19:25:50 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,8 @@ ifdef DEBUG
         CFLAGS += -D DEBUG=2
 	else ifeq ($(DEBUG),3)
         CFLAGS += -D DEBUG=3 
+	else ifeq ($(DEBUG),4)
+        CFLAGS += -D DEBUG=4 
 	endif
 endif
 

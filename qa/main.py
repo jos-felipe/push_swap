@@ -5,6 +5,7 @@ import subprocess
 from modules import _01_user_input_validation
 from modules import _02_indexing
 from modules import _03_moves
+from modules import _04_pre_order
 
 # Constant args
 program = ["../push_swap"]
@@ -38,5 +39,12 @@ print("MODULE_3")
 make = ["make", "DEBUG=3", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 _03_moves.moves(program, valgrind, valgrind_check, colours)
+subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+print("\n")
+
+print("MODULE_4")
+make = ["make", "DEBUG=4", "-C", "../"]
+subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+_04_pre_order.pre_test(program, valgrind, valgrind_check, colours)
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 print("\n")
