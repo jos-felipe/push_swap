@@ -1,9 +1,6 @@
 import subprocess
 
-def user_input():
-	cmd0 = "../push_swap"
-	valgrind = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
-	substring = "All heap blocks were freed -- no leaks are possible"
+def user_input(program, valgrind, valgrind_check):
 
 	# Int min and max
 	int_max = (2**31) - 1
@@ -42,10 +39,10 @@ def user_input():
 	stderr_list = []
 	stderr_val_list = []
 	for arg in args:
-		arg.insert(0, cmd0)
-		output = subprocess.run(arg, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-		arg[:0] = valgrind
-		output_val = subprocess.run(arg, stderr=subprocess.PIPE, text=True)
+		cmd = program + arg
+		output = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+		cmd_2 = valgrind + cmd
+		output_val = subprocess.run(cmd_2, stderr=subprocess.PIPE, text=True)
 		stderr_list.append(output.stderr)
 		stdout_list.append(output.stdout)
 		stderr_val_list.append(output_val.stderr)
@@ -58,8 +55,7 @@ def user_input():
 			print(f"{GREEN}{i + 1}. OK{COLOR_LIMITER}")
 		else:
 			print(f"{RED}{i + 1}. KO{COLOR_LIMITER}")
-		string = err_val
-		if substring in string:
+		if valgrind_check in err_val:
 			print(f"{GREEN}   MOK\n{COLOR_LIMITER}")
 		else:
 			print(f"{RED}   MKO\n{COLOR_LIMITER}")

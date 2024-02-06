@@ -1,14 +1,13 @@
 import subprocess
 
-def moves():
+def moves(program, valgrind, valgrind_check):
 	# Colors Definition 
 	GREEN = "\033[32;1m"
 	RED = "\033[31;1m"
 	CYAN = "\033[36;1;3;208m"
 	WHITE = "\033[37;1;4m"
 	COLOR_LIMITER = "\033[0m"
-
-	program = ["../push_swap"]
+	
 	arg = ["6", "5", "4", "3", "2", "1"]
 	cmd = program + arg
 
