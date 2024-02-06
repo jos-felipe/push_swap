@@ -6,13 +6,13 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/05 14:23:25 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/06 12:59:45 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 DEBUG_NAME = push_swap_debug
-CFLAGS = -g3
+CFLAGS = -g3 -Wall -Wextra -Werror
 #CFLAGS = -Wall -Werror -Wextra
 DFLAGS = -g3
 
@@ -49,9 +49,9 @@ ifdef DEBUG
 	ifeq ($(DEBUG),1)
         CFLAGS += -D DEBUG=1
 	else ifeq ($(DEBUG),2)
-        CFLAGS = -D DEBUG=2
+        CFLAGS += -D DEBUG=2
 	else ifeq ($(DEBUG),3)
-        CFLAGS = -D DEBUG=3
+        CFLAGS += -D DEBUG=3 
 	endif
 endif
 

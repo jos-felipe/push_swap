@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/05 16:57:36 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:49:01 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,11 @@ void		push_baby_moves(t_list_push **a, t_list_push **b);
 void		push_gateway(int op, t_list_push **a, t_list_push **b);
 void		push_do_sx(t_list_push **stack, char *sx);
 void		push_lstprintf_moves(t_list_push *lst);
+void		push_lstadd_front(t_list_push **lst, t_list_push *new);
 void		push_do_rrx(t_list_push **stack, char *rrx);
-// t_list_push	*push_lstlast(t_list_push *lst);
+void		push_do_rx(t_list_push **stack, char *rx);
+void		push_do_px(t_list_push **src, t_list_push **dest, char *px);
+void		push_do_rr(t_list_push **src, t_list_push **dest, char *rr);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 98_utils.c

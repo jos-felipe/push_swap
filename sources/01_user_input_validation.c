@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/03 18:31:31 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:32:05 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void ft_user_input_validation(int argc, char *argv[], t_bst **bst)
 {
-	int	*list;
-	
 	if (argc == 1)
 		exit(1);
 	ft_int(argc, argv, bst);
