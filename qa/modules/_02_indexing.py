@@ -1,13 +1,6 @@
 import subprocess
 
-def indexing(program, valgrind, valgrind_check):
-
-	# Colors Definition 
-	GREEN = "\033[32;1m"
-	RED = "\033[31;1m"
-	CYAN = "\033[36;1;3;208m"
-	WHITE = "\033[37;1;4m"
-	COLOR_LIMITER = "\033[0m"
+def indexing(program, valgrind, valgrind_check, colours):
 
 	battery = "Indexing"
 
@@ -25,10 +18,10 @@ def indexing(program, valgrind, valgrind_check):
 	# Printing test check
 	print(f"{battery.upper()}")
 	if ((output.stdout == ranking_list)):
-		print(f"{GREEN}1. OK{COLOR_LIMITER}")
+		print(f"{colours[0]}1. OK{colours[2]}")
 	else:
-		print(f"{RED}1. KO{COLOR_LIMITER}")
+		print(f"{colours[1]}1. KO{colours[2]}")
 	if valgrind_check in err_val:
-		print(f"{GREEN}   MOK\n{COLOR_LIMITER}")
+		print(f"{colours[0]}   MOK\n{colours[2]}")
 	else:
-		print(f"{RED}   MKO\n{COLOR_LIMITER}")
+		print(f"{colours[1]}   MKO\n{colours[2]}")

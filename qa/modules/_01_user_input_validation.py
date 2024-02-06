@@ -1,17 +1,10 @@
 import subprocess
 
-def user_input(program, valgrind, valgrind_check):
+def user_input(program, valgrind, valgrind_check, colours):
 
 	# Int min and max
 	int_max = (2**31) - 1
 	int_min = -(2**31)
-
-	# Colors Definition 
-	GREEN = "\033[32;1m"
-	RED = "\033[31;1m"
-	CYAN = "\033[36;1;3;208m"
-	WHITE = "\033[37;1;4m"
-	COLOR_LIMITER = "\033[0m"
 
 	# Creating args
 	battery = ["ordered_list", "str_on_list", "dup_on_list", "min_on_list", "max_on_list", "nothing_on_list"]
@@ -52,11 +45,11 @@ def user_input(program, valgrind, valgrind_check):
 	for out, err, err_val in zip(stdout_list, stderr_list, stderr_val_list):
 		print(f"{battery[i].upper()}")
 		if ((out == stdout_ref_list[i]) and (err == stderr_ref_list[i])):
-			print(f"{GREEN}{i + 1}. OK{COLOR_LIMITER}")
+			print(f"{colours[0]}{i + 1}. OK{colours[2]}")
 		else:
-			print(f"{RED}{i + 1}. KO{COLOR_LIMITER}")
+			print(f"{colours[1]}{i + 1}. KO{colours[2]}")
 		if valgrind_check in err_val:
-			print(f"{GREEN}   MOK\n{COLOR_LIMITER}")
+			print(f"{colours[0]}   MOK\n{colours[2]}")
 		else:
-			print(f"{RED}   MKO\n{COLOR_LIMITER}")
+			print(f"{colours[1]}   MKO\n{colours[2]}")
 		i = i + 1
