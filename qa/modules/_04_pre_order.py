@@ -13,7 +13,7 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	stdout_ref_unsorted = "2 8 5 7 3 4 0 1 \n6 9 \n4 0 1 \n3 7 5 8 2 6 9 \n0 1 4 \n"
 
 	# Runing and colecting output and error
-	cmd1 = program + sorted_list + " > /dev/null"
+	cmd1 = program + sorted_list
 	output_sorted = subprocess.run(cmd1, stdout=subprocess.PIPE, text=True)
 	ouput1 = output_sorted.stdout
 	cmd1 = valgrind + cmd1
