@@ -26,7 +26,7 @@ def moves(program, valgrind, valgrind_check, colours):
 	output = subprocess.run(cmd, stdout=subprocess.PIPE, text=True)
 	string_output = output.stdout
 	cmd_2 = valgrind + cmd
-	output_val = subprocess.run(cmd_2, stderr=subprocess.PIPE, text=True)
+	output_val = subprocess.run(cmd_2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 	err_val = output_val.stderr
 
 	# Geting output

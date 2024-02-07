@@ -23,14 +23,14 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	output_sorted = subprocess.run(cmd1, stdout=subprocess.PIPE, text=True)
 	ouput1 = output_sorted.stdout
 	cmd1 = valgrind + cmd1
-	output_sorted_val = subprocess.run(cmd1, stderr=subprocess.PIPE, text=True)
+	output_sorted_val = subprocess.run(cmd1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 	err_val_1 = output_sorted_val.stderr
 	
 	cmd2 = program + unsorted_list
 	output_unsorted = subprocess.run(cmd2, stdout=subprocess.PIPE, text=True)
 	ouput2 = output_unsorted.stdout
 	cmd2 = valgrind + cmd2
-	output_unsorted_val = subprocess.run(cmd2, stderr=subprocess.PIPE, text=True)
+	output_unsorted_val = subprocess.run(cmd2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 	err_val_2 = output_unsorted_val.stderr
 
 	# Check Ref with output
@@ -52,4 +52,3 @@ def pre_test(program, valgrind, valgrind_check, colours):
 		print(f"{colours[0]}   MOK{colours[2]}")
 	else:
 		print(f"{colours[1]}   MKO{colours[2]}")
-	print(stdout_ref_unsorted)
