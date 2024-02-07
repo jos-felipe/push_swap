@@ -11,12 +11,12 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	
 	# Reference output
 	stdout_ref_sorted = ""
-	stdout_ref_moves ="ra\nra\npb\nra\npb\nra\nra\npb\npb\nra\nra\npb\npb\npb\npb\n"
+	stdout_ref_moves ="ra\nra\npb\nra\npb\nra\nra\npb\npb\nra\nra\npb\npb\npb\npb\nsa\n"
 	stdout_ref_sorted_1 = "13 5 11 17 15 2 19 \n0 -5 -3 1 \n"
 	stdout_ref_sorted_2 = "15 2 19 \n17 11 5 13 0 -5 -3 1 \n"
 	stdout_ref_sorted_3 = "2 15 19 \n17 11 5 13 0 -5 -3 1 \n"
 	#stdout_ref_unsorted = stdout_ref_moves + stdout_ref_sorted_1 + stdout_ref_sorted_2 + stdout_ref_sorted_3
-	stdout_ref_unsorted = stdout_ref_moves
+	stdout_ref_unsorted = stdout_ref_moves + stdout_ref_sorted_3
 
 	# Runing and colecting output and error
 	cmd1 = program + sorted_list
@@ -52,3 +52,4 @@ def pre_test(program, valgrind, valgrind_check, colours):
 		print(f"{colours[0]}   MOK{colours[2]}")
 	else:
 		print(f"{colours[1]}   MKO{colours[2]}")
+	print(stdout_ref_unsorted)
