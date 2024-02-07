@@ -1,6 +1,6 @@
 import subprocess
 
-def pre_test(program, valgrind, valgrind_check, colours):
+def pre_sort(program, valgrind, valgrind_check, colours):
 
 	# Creating args
 	sorted_list = []
