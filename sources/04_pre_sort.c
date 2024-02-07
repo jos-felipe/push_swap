@@ -31,9 +31,16 @@ void	push_all_save_three(t_list_push **a, t_list_push **b)
 
 void	push_tiny_sort(t_list_push **a)
 {
-	if ((*a)->next->index > (*a)->index && (*a)->next->index > (*a)->next->next->index)
+	int first;
+	int second;
+	int third;
+
+	first = (*a)->index; 
+	second = (*a)->next->index;
+	third = (*a)->next->next->index;
+	if (second > first && second > third)
 		push_do_rrx(a, "rra");
-	else if ((*a)->index > (*a)->next->index && (*a)->index > (*a)->next->next->index)
+	else if (first > second && first > third)
 		push_do_rx(a, "ra");
 	if (!push_is_sorted(*a))
 		push_do_sx(a, "sa");

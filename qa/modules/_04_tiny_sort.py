@@ -11,8 +11,8 @@ def	tiny_sort(program, valgrind, valgrind_check, colours):
 	output_ref_list = []
 	for move, nbr_pos in zip(move_refs, nbr_refs_pos):
 		output_ref_list.append(move + nbr_pos)
-	print(output_ref_list)
 
+	# Colecting outputs
 	all_outputs = []
 	all_outputs_val = []
 	for tiny_sort_arg in all_tiny_sort_args:
@@ -22,8 +22,8 @@ def	tiny_sort(program, valgrind, valgrind_check, colours):
 		output_val = subprocess.run(cmd_val, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 		all_outputs.append(output.stdout)
 		all_outputs_val.append(output_val.stderr)
-	print(all_outputs)
 	
+	# Checking ref with outputs
 	i = 1
 	for out, out_val, out_ref in zip(all_outputs, all_outputs_val, output_ref_list):
 		print("---------")
