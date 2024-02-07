@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/07 15:06:55 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:29:03 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ int main(int argc, char *argv[])
 	if (DEBUG == 4) // _04_pre_sort.py
 	{
 		push_lstprintf_value(a);
-		push_lstprintf_value(b);
+		if (b != NULL)
+			push_lstprintf_value(b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);
