@@ -5,39 +5,39 @@ void	push_baby_moves(t_list_push **a, t_list_push **b)
 	int	i;
 
 	push_gateway(RRA, a, b);
-	push_lstprintf_moves(*a);
+	push_lstprintf_value(*a);
 	push_gateway(RA, a, b);
-	push_lstprintf_moves(*a);
+	push_lstprintf_value(*a);
 	push_gateway(SA, a, b);
-	push_lstprintf_moves(*a);
+	push_lstprintf_value(*a);
 	push_gateway(SA, a, b);
-	push_lstprintf_moves(*a);
+	push_lstprintf_value(*a);
 	i = 0;
 	while (i++ < 6)
 		push_gateway(PB, a, b);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*b);
 	push_gateway(RB, a, b);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*b);
 	push_gateway(RRB, a, b);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*b);
 	push_gateway(SB, a, b);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*b);
 	push_gateway(SB, a, b);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*b);
 	i = 0;
 	while (i++ < 3)
 		push_gateway(PA, a, b);
-	push_lstprintf_moves(*a);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*a);
+	push_lstprintf_value(*b);
 	push_gateway(RR, a, b);
-	push_lstprintf_moves(*a);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*a);
+	push_lstprintf_value(*b);
 	push_gateway(RRR, a, b);
-	push_lstprintf_moves(*a);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*a);
+	push_lstprintf_value(*b);
 	push_gateway(SS, a, b);
-	push_lstprintf_moves(*a);
-	push_lstprintf_moves(*b);
+	push_lstprintf_value(*a);
+	push_lstprintf_value(*b);
 }
 
 void	push_gateway(int op, t_list_push **a, t_list_push **b)
@@ -64,19 +64,6 @@ void	push_gateway(int op, t_list_push **a, t_list_push **b)
 		push_do_px(b, a, "pa");
 	else if (op == PB)
 		push_do_px(a, b, "pb");
-}
-
-void	push_lstprintf_moves(t_list_push *lst)
-{
-	int	value;
-	
-	while (lst)
-	{
-		value = lst->value;
-		ft_printf("%d ", value);
-		lst = lst->next;
-	}
-	ft_printf("\n");
 }
 
 t_list_push	*push_lst_n_1(t_list_push *lst)

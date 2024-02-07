@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 16:58:24 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/07 10:53:42 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,25 +46,25 @@ typedef struct s_list_push
 
 
 // 01_user_input_validation.c
-void 	ft_user_input_validation(int argc, char *argv[], t_bst **bst);
+void 	push_user_input_validation(int argc, char *argv[], t_bst **bst);
 void	ft_int(int argc, char *argv[], t_bst **bst);
 t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_inserted);
 
 // 02_indexing.c
-void	ft_fill_stack(t_list_push **a, int argc, char *argv[]);
-void	ft_bst_indexing(t_bst **bst, t_list_push **a);
+void	push_fill_stack(t_list_push **a, int argc, char *argv[]);
+void	push_bst_indexing(t_bst **bst, t_list_push **a);
 void	bst_in_order_static(t_bst *node, int index);
 t_list_push	*push_lstnew(int nbr);
 void	push_lstadd_back(t_list_push **lst, t_list_push *new);
 t_list_push	*push_lstlast(t_list_push *lst);
 void	bst_in_order_print_index(t_bst *node);
-void	ft_lst_indexing(t_list_push *a, t_bst *bst);
+void	push_lst_indexing(t_list_push *a, t_bst *bst);
 
 // 03_moves.c
 void		push_baby_moves(t_list_push **a, t_list_push **b);
 void		push_gateway(int op, t_list_push **a, t_list_push **b);
 void		push_do_sx(t_list_push **stack, char *sx);
-void		push_lstprintf_moves(t_list_push *lst);
+void		push_lstprintf_value(t_list_push *lst);
 void		push_lstadd_front(t_list_push **lst, t_list_push *new);
 void		push_do_rrx(t_list_push **stack, char *rrx);
 void		push_do_rx(t_list_push **stack, char *rx);
@@ -75,12 +75,13 @@ void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 04_pre_sort.c
+void	push_all_save_three(t_list_push **a, t_list_push **b);
 
 
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
-void	ft_safe_exit(	int status, \
+void	push_safe_exit(	int status, \
 						t_list_push **a, \
 						t_list_push **b, \
 						t_bst **bst);
@@ -96,4 +97,5 @@ void	push_lstprintf(t_list_push *lst);
 
 // 96_utils.c
 int		push_is_sorted(t_list_push *node);
+int		push_lstsize(t_list_push *lst);
 #endif

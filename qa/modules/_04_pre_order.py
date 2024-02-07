@@ -1,16 +1,21 @@
 import subprocess
 
 def pre_test(program, valgrind, valgrind_check, colours):
+
 	# Creating args
 	sorted_list = []
 	sorted_range = range(0, 10, 1)
 	for n in sorted_range:
 		sorted_list.append(str(n))
-	unsorted_list = ["4", "0", "1", "9", "6", "2", "8", "5", "7", "3"]
+	unsorted_list = ["13", "5", "1", "11", "-3", "17", "15", "-5", "0", "2", "19"]
 	
 	# Reference output
 	stdout_ref_sorted = ""
-	stdout_ref_unsorted = "2 8 5 7 3 4 0 1 \n6 9 \n4 0 1 \n3 7 5 8 2 6 9 \n0 1 4 \n"
+	stdout_ref_moves ="ra\nra\npb\nra\npb\nra\nra\npb\npb\nra\nra\n"
+	stdout_ref_sorted_1 = "13 5 11 17 15 2 19 \n0 -5 -3 1 \n"
+	stdout_ref_sorted_2 = "15 2 19 \n17 11 5 13 0 -5 -3 1 \n"
+	stdout_ref_sorted_3 = "2 15 19 \n17 11 5 13 0 -5 -3 1 \n"
+	stdout_ref_unsorted = stdout_ref_moves + stdout_ref_sorted_1 + stdout_ref_sorted_2 + stdout_ref_sorted_3
 
 	# Runing and colecting output and error
 	cmd1 = program + sorted_list
@@ -26,6 +31,8 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	cmd2 = valgrind + cmd2
 	output_unsorted_val = subprocess.run(cmd2, stderr=subprocess.PIPE, text=True)
 	err_val_2 = output_unsorted_val.stderr
+
+	# Check Ref with output
 	print("Sorted list")
 	if (ouput1 == stdout_ref_sorted):
 		print(colours[0] + "1. OK" + colours[2])

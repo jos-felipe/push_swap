@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	ft_fill_stack(t_list_push **a, int argc, char *argv[])
+void	push_fill_stack(t_list_push **a, int argc, char *argv[])
 {
 	int		i;
 	long	nbr;
@@ -38,7 +38,7 @@ int	push_bst_is_member(t_bst *node, int find_key)
 		return (node->index);
 }
 
-void	ft_lst_indexing(t_list_push *a, t_bst *bst)
+void	push_lst_indexing(t_list_push *a, t_bst *bst)
 {
 	int	key;
 	
@@ -50,7 +50,7 @@ void	ft_lst_indexing(t_list_push *a, t_bst *bst)
 	}
 }
 
-void	ft_bst_indexing(t_bst **bst, t_list_push **a)
+void	push_bst_indexing(t_bst **bst, t_list_push **a)
 {
 
 	bst_in_order_static(*bst, 0);

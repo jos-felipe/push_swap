@@ -38,7 +38,7 @@ void	free_heap(t_list *lst_memory)
 	}
 }
 
-void	ft_safe_exit(	int status, \
+void	push_safe_exit(	int status, \
 						t_list_push **a, \
 						t_list_push **b, \
 						t_bst **bst)

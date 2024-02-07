@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 19:27:07 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:27:08 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,33 @@ int main(int argc, char *argv[])
 	bst = NULL;
 	a = NULL;
 	b = NULL;
-	ft_user_input_validation(argc, argv, &bst);
+	push_user_input_validation(argc, argv, &bst);
 	if (DEBUG == 1) // _01_user_input_validation.py
-		ft_safe_exit(0, &a, &b, &bst);
-	ft_fill_stack(&a, argc, argv);
+		push_safe_exit(0, &a, &b, &bst);
+	push_fill_stack(&a, argc, argv);
 	if (push_is_sorted(a))
-		ft_safe_exit(0, &a, &b, &bst);
-	ft_bst_indexing(&bst, &a);
-	ft_lst_indexing(a, bst);
+		push_safe_exit(0, &a, &b, &bst);
+	push_bst_indexing(&bst, &a);
+	push_lst_indexing(a, bst);
 	if (DEBUG == 2) // _02_indexing.py
 	{
 		push_lstprintf(a);
-		ft_safe_exit(0, &a, &b, &bst);
+		push_safe_exit(0, &a, &b, &bst);
 	}
 	if (DEBUG == 3) // _03_moves.py
 	{
 		push_baby_moves(&a, &b);
-		ft_safe_exit(0, &a, &b, &bst);
+		push_safe_exit(0, &a, &b, &bst);
 	}
+	push_lstprintf_value(a);
+	push_lstprintf_value(b);
+	push_all_save_three(&a, &b);
+	//push_tiny_sort(a);
 	if (DEBUG == 4) // _04_pre_sort.py
 	{
-		push_lstprintf(a);
-		push_lstprintf(b);
-		ft_safe_exit(0, &a, &b, &bst);
+		push_lstprintf_value(a);
+		push_lstprintf_value(b);
+		push_safe_exit(0, &a, &b, &bst);
 	}
-	ft_safe_exit(0, &a, &b, &bst);
+	push_safe_exit(0, &a, &b, &bst);
 }

@@ -15,3 +15,16 @@ int	push_is_sorted(t_list_push *node)
 	}
 	return (1);
 }
+
+int	push_lstsize(t_list_push *lst)
+{
+	size_t		i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}

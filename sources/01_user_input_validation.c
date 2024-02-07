@@ -6,13 +6,13 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/06 12:32:05 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/07 09:34:59 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void ft_user_input_validation(int argc, char *argv[], t_bst **bst)
+void push_user_input_validation(int argc, char *argv[], t_bst **bst)
 {
 	if (argc == 1)
 		exit(1);
@@ -34,7 +34,7 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 			ft_error(bst);
 		nbr = ft_atol(argv[i]);
 		if (ft_int_overflow(nbr))
-			ft_safe_exit(1, NULL, NULL, bst);
+			push_safe_exit(1, NULL, NULL, bst);
 		(*bst) = bst_insert_ps(bst, *bst, (int)nbr, &was_inserted);
 		i++;
 	}	
