@@ -11,11 +11,12 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	
 	# Reference output
 	stdout_ref_sorted = ""
-	stdout_ref_moves ="ra\nra\npb\nra\npb\nra\nra\npb\npb\nra\nra\n"
+	stdout_ref_moves ="ra\nra\npb\nra\npb\nra\nra\npb\npb\nra\nra\npb\npb\npb\npb\n"
 	stdout_ref_sorted_1 = "13 5 11 17 15 2 19 \n0 -5 -3 1 \n"
 	stdout_ref_sorted_2 = "15 2 19 \n17 11 5 13 0 -5 -3 1 \n"
 	stdout_ref_sorted_3 = "2 15 19 \n17 11 5 13 0 -5 -3 1 \n"
-	stdout_ref_unsorted = stdout_ref_moves + stdout_ref_sorted_1 + stdout_ref_sorted_2 + stdout_ref_sorted_3
+	#stdout_ref_unsorted = stdout_ref_moves + stdout_ref_sorted_1 + stdout_ref_sorted_2 + stdout_ref_sorted_3
+	stdout_ref_unsorted = stdout_ref_moves
 
 	# Runing and colecting output and error
 	cmd1 = program + sorted_list
@@ -39,15 +40,15 @@ def pre_test(program, valgrind, valgrind_check, colours):
 	else:
 		print(colours[1] + "1. KO" + colours[2])
 	if valgrind_check in err_val_1:
-			print(f"{colours[0]}   MOK{colours[2]}")
+		print(f"{colours[0]}   MOK{colours[2]}")
 	else:
-			print(f"{colours[1]}   MKO{colours[2]}")
+		print(f"{colours[1]}   MKO{colours[2]}")
 	print("Unsorted list")
 	if (ouput2 == stdout_ref_unsorted):
 		print(colours[0] + "2. OK" + colours[2])
 	else:
 		print(colours[1] + "2. KO" + colours[2])
 	if valgrind_check in err_val_2:
-			print(f"{colours[0]}   MOK{colours[2]}")
+		print(f"{colours[0]}   MOK{colours[2]}")
 	else:
-			print(f"{colours[1]}   MKO{colours[2]}")
+		print(f"{colours[1]}   MKO{colours[2]}")

@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/07 11:27:08 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/07 12:46:10 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,12 @@ int main(int argc, char *argv[])
 		push_baby_moves(&a, &b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
-	push_lstprintf_value(a);
-	push_lstprintf_value(b);
 	push_all_save_three(&a, &b);
 	//push_tiny_sort(a);
 	if (DEBUG == 4) // _04_pre_sort.py
 	{
-		push_lstprintf_value(a);
-		push_lstprintf_value(b);
+		// push_lstprintf_value(a);
+		// push_lstprintf_value(b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);
