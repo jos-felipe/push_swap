@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/08 16:13:54 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/08 18:40:30 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ typedef struct s_list_push
 {
 	int				value;
 	int				index;
+	int				position;
+	int				target_pos;
 	struct s_list_push	*next;
 }	t_list_push;
 
@@ -79,6 +81,11 @@ void	push_all_save_three(t_list_push **a, t_list_push **b);
 void	push_tiny_sort(t_list_push **a);
 void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst);
 
+// 05_target_position.c
+int		push_target_comp(int b_index, t_list_push *a);
+int		push_target_min(t_list_push *a);
+void	push_target_pos(t_list_push *a, t_list_push *b);
+void	push_get_positon(t_list_push *node);
 
 // 99_utils.c
 int		ft_is_zero(char *str);
@@ -100,4 +107,8 @@ void	push_lstprintf(t_list_push *lst);
 // 96_utils.c
 int		push_is_sorted(t_list_push *node);
 int		push_lstsize(t_list_push *lst);
+
+// 95_utils.c
+void	push_lstprintf_target_pos(t_list_push *lst);
+
 #endif
