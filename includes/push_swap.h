@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/07 15:04:00 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/08 16:13:54 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ t_list_push	*push_lst_n_1(t_list_push *lst);
 // 04_pre_sort.c
 void	push_all_save_three(t_list_push **a, t_list_push **b);
 void	push_tiny_sort(t_list_push **a);
+void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst);
 
 
 // 99_utils.c

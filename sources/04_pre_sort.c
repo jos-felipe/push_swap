@@ -45,3 +45,12 @@ void	push_tiny_sort(t_list_push **a)
 	if (!push_is_sorted(*a))
 		push_do_sx(a, "sa");
 }
+
+void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst)
+{
+	if (push_lstsize(*a) == 2)
+	{
+		push_do_sx(a, "sa");
+		push_safe_exit(0, a, b, bst);
+	}
+}
