@@ -6,7 +6,7 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/08 16:55:07 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/09 11:06:21 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,9 @@ ifdef DEBUG
 	else ifeq ($(DEBUG),4)
         CFLAGS += -D DEBUG=4 
 	else ifeq ($(DEBUG),5)
-        CFLAGS += -D DEBUG=5 
+        CFLAGS += -D DEBUG=5
+	else ifeq ($(DEBUG),6)
+        CFLAGS += -D DEBUG=6 
 	endif
 endif
 

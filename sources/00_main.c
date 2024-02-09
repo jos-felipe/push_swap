@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/08 17:09:45 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:29:28 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@ int main(int argc, char *argv[])
 	if (DEBUG == 5) // _05_target_position.py
 	{
 		push_lstprintf_target_pos(b);
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	push_comp_cost(a, b);
+	if (DEBUG == 6) // _06_comp_cost.py
+	{
+		push_lstprintf_cost(b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);

@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/08 17:08:52 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:18:41 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_list_push	*push_lstnew(int nbr)
 	new_node->index = 0;
 	new_node->position = -1;
 	new_node->target_pos = -1;
+	new_node->cost_a = INT_MAX;
+	new_node->cost_b = INT_MAX;
 	new_node->next = NULL;
 	return (new_node);
 }

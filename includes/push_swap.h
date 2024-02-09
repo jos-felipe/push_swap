@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/08 18:40:30 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:31:38 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ typedef struct s_list_push
 	int				index;
 	int				position;
 	int				target_pos;
+	int				cost_a;
+	int				cost_b;
 	struct s_list_push	*next;
 }	t_list_push;
 
@@ -87,6 +89,9 @@ int		push_target_min(t_list_push *a);
 void	push_target_pos(t_list_push *a, t_list_push *b);
 void	push_get_positon(t_list_push *node);
 
+// 06_comp_cost.c
+void	push_comp_cost(t_list_push *a, t_list_push *b);
+
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
@@ -110,5 +115,8 @@ int		push_lstsize(t_list_push *lst);
 
 // 95_utils.c
 void	push_lstprintf_target_pos(t_list_push *lst);
+
+// 94_utils.c
+void	push_lstprintf_cost(t_list_push *lst);
 
 #endif
