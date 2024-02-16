@@ -9,6 +9,7 @@ from modules import _04_pre_sort
 from modules import _04_tiny_sort
 from modules import _05_target_position
 from modules import _06_comp_cost
+from modules import _07_cheapest_move
 
 # Constant args
 program = ["../push_swap"]
@@ -67,5 +68,12 @@ print("MODULE_6")
 make = ["make", "DEBUG=6", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 _06_comp_cost.comp_cost(program, valgrind, valgrind_check, colours)
+subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+print("\n")
+
+print("MODULE_7")
+make = ["make", "DEBUG=7", "-C", "../"]
+subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+_07_cheapest_move.cheapest_move(program, valgrind, valgrind_check, colours)
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 print("\n")

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/09 11:29:28 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/16 11:12:10 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,10 @@ int main(int argc, char *argv[])
 	if (DEBUG == 6) // _06_comp_cost.py
 	{
 		push_lstprintf_cost(b);
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	if (DEBUG == 7) // _07_cheapest_move.py
+	{
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);
