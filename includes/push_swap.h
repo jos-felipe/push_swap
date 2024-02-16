@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/09 11:31:38 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/16 11:43:16 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,9 @@ void	push_get_positon(t_list_push *node);
 // 06_comp_cost.c
 void	push_comp_cost(t_list_push *a, t_list_push *b);
 
+// 07_cheapest_move.c
+void	push_cheapest_move(t_list_push *b, int *rotations);
+
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
@@ -118,5 +121,8 @@ void	push_lstprintf_target_pos(t_list_push *lst);
 
 // 94_utils.c
 void	push_lstprintf_cost(t_list_push *lst);
+
+// 93_utils.c
+int		push_abs(int n);
 
 #endif

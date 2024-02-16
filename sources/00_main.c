@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/16 11:12:10 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/16 11:38:20 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	t_bst		*bst;
 	t_list_push	*a;
 	t_list_push	*b;
+	int			rotations[2];
 	
 	bst = NULL;
 	a = NULL;
@@ -63,6 +64,8 @@ int main(int argc, char *argv[])
 	}
 	if (DEBUG == 7) // _07_cheapest_move.py
 	{
+		push_cheapest_move(b, rotations);
+		ft_printf("[%d,%d]\n", rotations[0], rotations[1]);
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);
