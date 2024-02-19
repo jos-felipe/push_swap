@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/19 14:05:14 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:35:33 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,9 @@ void	push_sort(t_list_push **a, t_list_push **b, int *rotations);
 void	push_double_rotation(t_list_push **a, t_list_push **b, int *rotations);
 void	push_single_rot_a(t_list_push **a, int *rotation);
 void	push_single_rot_b(t_list_push **b, int *rotation);
+
+// 09_push_swap.c
+void	push_swap(t_list_push **a, t_list_push **b, int *rotations);
 
 // 99_utils.c
 int		ft_is_zero(char *str);

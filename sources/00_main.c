@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/19 13:10:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:28:08 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,15 @@ int main(int argc, char *argv[])
 	}
 	push_sort(&a, &b, rotations);
 	if (DEBUG == 8) // _08_sort.py
+	{
+		push_lstprintf_index(a);
+		ft_printf("\n");
+		push_lstprintf_index(b);
+		ft_printf("\n");
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	push_swap(&a, &b, rotations);
+	if (DEBUG == 9) // _09_push_swap.py
 	{
 		push_lstprintf_index(a);
 		ft_printf("\n");
