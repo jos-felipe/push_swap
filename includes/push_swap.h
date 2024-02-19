@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/16 11:43:16 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/19 14:05:14 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		push_do_rrx(t_list_push **stack, char *rrx);
 void		push_do_rx(t_list_push **stack, char *rx);
 void		push_do_px(t_list_push **src, t_list_push **dest, char *px);
 void		push_do_rrr(t_list_push **a, t_list_push **b, char *rrr);
-void		push_do_rr(t_list_push **src, t_list_push **dest, char *rr);
+void		push_do_rr(t_list_push **a, t_list_push **b, char *rr);
 void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
@@ -95,6 +95,12 @@ void	push_comp_cost(t_list_push *a, t_list_push *b);
 // 07_cheapest_move.c
 void	push_cheapest_move(t_list_push *b, int *rotations);
 
+// 08_sort.c
+void	push_sort(t_list_push **a, t_list_push **b, int *rotations);
+void	push_double_rotation(t_list_push **a, t_list_push **b, int *rotations);
+void	push_single_rot_a(t_list_push **a, int *rotation);
+void	push_single_rot_b(t_list_push **b, int *rotation);
+
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
@@ -110,7 +116,7 @@ int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
 
 // 98_utils.c
-void	push_lstprintf(t_list_push *lst);
+void	push_lstprintf_index(t_list_push *lst);
 
 // 96_utils.c
 int		push_is_sorted(t_list_push *node);

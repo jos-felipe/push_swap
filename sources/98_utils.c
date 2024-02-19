@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/09 11:18:41 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:48:48 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,12 @@ t_list_push	*push_lstlast(t_list_push *lst)
 	return (lst);
 }
 
-void	push_lstprintf(t_list_push *lst)
+void	push_lstprintf_index(t_list_push *lst)
 {
-	int	value;
 	int	index;
 	
 	while (lst)
 	{
-		value = lst->value;
 		index = lst->index;
 		ft_printf("%d ", index);
 		lst = lst->next;

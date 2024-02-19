@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/16 11:38:20 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:10:59 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	push_lst_indexing(a, bst);
 	if (DEBUG == 2) // _02_indexing.py
 	{
-		push_lstprintf(a);
+		push_lstprintf_index(a);
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	if (DEBUG == 3) // _03_moves.py
@@ -62,10 +62,19 @@ int main(int argc, char *argv[])
 		push_lstprintf_cost(b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
+	push_cheapest_move(b, rotations);
 	if (DEBUG == 7) // _07_cheapest_move.py
 	{
-		push_cheapest_move(b, rotations);
 		ft_printf("[%d,%d]\n", rotations[0], rotations[1]);
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	push_sort(&a, &b, rotations);
+	if (DEBUG == 8) // _08_sort.py
+	{
+		push_lstprintf_index(a);
+		ft_printf("\n");
+		push_lstprintf_index(b);
+		ft_printf("\n");
 		push_safe_exit(0, &a, &b, &bst);
 	}
 	push_safe_exit(0, &a, &b, &bst);
