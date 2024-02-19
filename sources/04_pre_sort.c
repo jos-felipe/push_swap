@@ -13,18 +13,18 @@ void	push_all_save_three(t_list_push **a, t_list_push **b)
 	{
 		if ((*a)->index < stack_size / 2)
 		{
-			push_do_px(a, b, "pb");
+			push_gateway(PB, a, b);
 			pushed++;
 		}
 		else
-			push_do_rx(a, "ra");
+			push_gateway(RA, a, NULL);
 		i++;
 	}
 	i = 0;
 	stack_size = stack_size - pushed;
 	while (i < stack_size - 3)
 	{
-		push_do_px(a, b, "pb");
+		push_gateway(PB, a, b);
 		i++;
 	}
 }
@@ -39,18 +39,18 @@ void	push_tiny_sort(t_list_push **a)
 	second = (*a)->next->index;
 	third = (*a)->next->next->index;
 	if (second > first && second > third)
-		push_do_rrx(a, "rra");
+		push_gateway(RRA, a, NULL);
 	else if (first > second && first > third)
-		push_do_rx(a, "ra");
+		push_gateway(RA, a, NULL);
 	if (!push_is_sorted(*a))
-		push_do_sx(a, "sa");
+		push_gateway(SA, a, NULL);
 }
 
 void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst)
 {
 	if (push_lstsize(*a) == 2)
 	{
-		push_do_sx(a, "sa");
+		push_gateway(SA, a, NULL);
 		push_safe_exit(0, a, b, bst);
 	}
 }
