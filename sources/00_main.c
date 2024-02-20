@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/19 16:28:08 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:08:19 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,15 @@ int main(int argc, char *argv[])
 	}
 	push_swap(&a, &b, rotations);
 	if (DEBUG == 9) // _09_push_swap.py
+	{
+		push_lstprintf_index(a);
+		ft_printf("\n");
+		push_lstprintf_index(b);
+		ft_printf("\n");
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	push_dial(&a);
+	if (DEBUG == 10) // _10_dial.py
 	{
 		push_lstprintf_index(a);
 		ft_printf("\n");

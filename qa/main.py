@@ -12,6 +12,7 @@ from modules import _06_comp_cost
 from modules import _07_cheapest_move
 from modules import _08_sort
 from modules import _09_push_swap
+from modules import _10_dial
 
 # Constant args
 program = ["../push_swap"]
@@ -91,5 +92,12 @@ print("MODULE_9")
 make = ["make", "DEBUG=9", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 _09_push_swap.push_swap(program, valgrind, valgrind_check, colours)
+subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+print("\n")
+
+print("MODULE_10")
+make = ["make", "DEBUG=10", "-C", "../"]
+subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+_10_dial.dial(program, valgrind, valgrind_check, colours)
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 print("\n")

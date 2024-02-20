@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/19 16:35:33 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:11:56 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,9 @@ void	push_single_rot_b(t_list_push **b, int *rotation);
 // 09_push_swap.c
 void	push_swap(t_list_push **a, t_list_push **b, int *rotations);
 
+// 10_dial.c
+void	push_dial(t_list_push **a);
+
 // 99_utils.c
 int		ft_is_zero(char *str);
 void	free_heap(t_list *lst_memory);
@@ -133,5 +136,11 @@ void	push_lstprintf_cost(t_list_push *lst);
 
 // 93_utils.c
 int		push_abs(int n);
+
+// 92_utils.c
+
+// 91_utils.c
+
+// 90_utils.c
 
 #endif
