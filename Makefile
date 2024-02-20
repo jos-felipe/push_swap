@@ -6,14 +6,13 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/20 12:06:57 by josfelip         ###   ########.fr        #
+#    Updated: 2024/02/20 17:29:35 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 DEBUG_NAME = push_swap_debug
-CFLAGS = -g3 -Wall -Wextra -Werror
-#CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
 DFLAGS = -g3
 
 # Paths for libraries
@@ -47,25 +46,25 @@ endif
 
 ifdef DEBUG
 	ifeq ($(DEBUG),1)
-        CFLAGS += -D DEBUG=1
+        CFLAGS += $(DFLAGS) -D DEBUG=1
 	else ifeq ($(DEBUG),2)
-        CFLAGS += -D DEBUG=2
+        CFLAGS += $(DFLAGS) -D DEBUG=2
 	else ifeq ($(DEBUG),3)
-        CFLAGS += -D DEBUG=3 
+        CFLAGS += $(DFLAGS) -D DEBUG=3 
 	else ifeq ($(DEBUG),4)
-        CFLAGS += -D DEBUG=4 
+        CFLAGS += $(DFLAGS) -D DEBUG=4 
 	else ifeq ($(DEBUG),5)
-        CFLAGS += -D DEBUG=5
+        CFLAGS += $(DFLAGS) -D DEBUG=5
 	else ifeq ($(DEBUG),6)
-        CFLAGS += -D DEBUG=6
+        CFLAGS += $(DFLAGS) -D DEBUG=6
 	else ifeq ($(DEBUG),7)
-        CFLAGS += -D DEBUG=7 
+        CFLAGS += $(DFLAGS) -D DEBUG=7 
 	else ifeq ($(DEBUG),8)
-        CFLAGS += -D DEBUG=8
+        CFLAGS += $(DFLAGS) -D DEBUG=8
 	else ifeq ($(DEBUG),9)
-        CFLAGS += -D DEBUG=9
+        CFLAGS += $(DFLAGS) -D DEBUG=9
 	else ifeq ($(DEBUG),10)
-		CFLAGS += -D DEBUG=10 
+		CFLAGS += $(DFLAGS) -D DEBUG=10 
 	endif
 endif
 
