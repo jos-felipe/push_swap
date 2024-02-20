@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 12:08:41 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/20 12:16:39 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:35:11 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	push_dial(t_list_push **a)
 {
-	push_lstprintf_value(*a);
+	int half;
+
+	half = push_lstsize(*a) / 2;
+	while ((*a)->index != 1)
+	{
+		if ((*a)->index > half)
+			push_gateway(RA, a, NULL);
+		else
+			push_gateway(RRA, a, NULL);
+	}
 }
