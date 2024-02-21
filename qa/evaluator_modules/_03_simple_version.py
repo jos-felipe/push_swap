@@ -24,7 +24,8 @@ def	simple_version(program, valgrind, valgrind_check, colours):
 	# Checking ref with outputs
 	i = 1
 	for out, out_val, out_ref in zip(all_outputs, all_outputs_val, ref_list):
-		print("---------")
+		print(all_tiny_sort_args_checker[i - 1])
+		print("--------")
 		if (out == out_ref):
 			print(f"{colours[0]}{i}. OK  {colours[2]}")
 		else:
