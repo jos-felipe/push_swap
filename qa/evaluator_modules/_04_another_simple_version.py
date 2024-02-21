@@ -32,8 +32,8 @@ def	another_simple_version(program, valgrind, valgrind_check, colours):
 	# Checking ref with outputs
 	i = 1
 	for out_checker, out_moves, out_val, out_ref in zip(all_outputs_checker, all_outputs_moves, all_outputs_val, ref_list):
-		print(all_tiny_sort_args_checker[i - 1])
 		print("-----------")
+		print(all_tiny_sort_args_checker[i - 1])
 		if (out_checker == out_ref and int(out_moves) <= max_moves):
 			print(f"{colours[0]}{i}. OK  {colours[2]}")
 		else:
