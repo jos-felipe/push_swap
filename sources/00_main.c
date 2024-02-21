@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/21 11:23:42 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/21 18:01:28 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,14 @@ int main(int argc, char *argv[])
 	}
 	push_dial(&a);
 	if (DEBUG == 10) // _10_dial.py
+	{
+		push_lstprintf_index(a);
+		ft_printf("\n");
+		push_lstprintf_index(b);
+		ft_printf("\n");
+		push_safe_exit(0, &a, &b, &bst);
+	}
+	if (DEBUG == 11) // _11_split.py
 	{
 		push_lstprintf_index(a);
 		ft_printf("\n");
