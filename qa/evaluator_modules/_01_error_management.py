@@ -1,24 +1,9 @@
 import subprocess
 
-def error_manegement(program, valgrind, valgrind_check, colours):
-	# # Constant args
-	# program = ["../push_swap"]
-	# valgrind = ["valgrind", "--leak-check=full", "--show-leak-kinds=all", "--track-origins=yes"]
-	# valgrind_check = "All heap blocks were freed -- no leaks are possible"
-
-	# # Colours
-	# GREEN = "\033[32;1m"
-	# RED = "\033[31;1m"
-	# COLOR_LIMITER = "\033[0m"
-	# colours = [GREEN, RED, COLOR_LIMITER]
-
-	# clean = ["make", "clean", "-C", "../"]
-	# subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-	# make = ["make", "-C", "../"]
-	# subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+def error_management(program, valgrind, valgrind_check, colours):
 
 	# Creating args
-	battery = ["str_on_list", "dup_on_list", "max_on_list", "nothing_on_list"]
+	battery = ["str on list", "dup on list", "max on list", "nothing on list"]
 	str_on_list = ["1", "2", "3", "abc", "5", "6", "7"]
 	dup_on_list = ["1", "2", "3", "3", "5", "6", "7"]
 	max_on_list = ["1", "2", "3", "2147483648", "5", "6", "7"]

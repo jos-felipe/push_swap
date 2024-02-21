@@ -2,7 +2,8 @@
 
 import subprocess
 
-from evaluator_modules import _01_error_manegement
+from evaluator_modules import _01_error_management
+from evaluator_modules import _02_identity_test
 
 # Constant args
 program = ["../push_swap"]
@@ -22,8 +23,13 @@ make = ["make", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 # Error management test
-print("TEST_1")
-_01_error_manegement.error_manegement(program, valgrind, valgrind_check, colours)
+print("Error management")
+_01_error_management.error_management(program, valgrind, valgrind_check, colours)
+print("\n")
+
+# Identity test
+print("Identity test")
+_02_identity_test.identity_test(program, valgrind, valgrind_check, colours)
 print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
