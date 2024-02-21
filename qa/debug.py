@@ -2,17 +2,17 @@
 
 import subprocess
 
-from modules import _01_user_input_validation
-from modules import _02_indexing
-from modules import _03_moves
-from modules import _04_pre_sort
-from modules import _04_tiny_sort
-from modules import _05_target_position
-from modules import _06_comp_cost
-from modules import _07_cheapest_move
-from modules import _08_sort
-from modules import _09_push_swap
-from modules import _10_dial
+from debug_modules import _01_user_input_validation
+from debug_modules import _02_indexing
+from debug_modules import _03_moves
+from debug_modules import _04_pre_sort
+from debug_modules import _04_tiny_sort
+from debug_modules import _05_target_position
+from debug_modules import _06_comp_cost
+from debug_modules import _07_cheapest_move
+from debug_modules import _08_sort
+from debug_modules import _09_push_swap
+from debug_modules import _10_dial
 
 # Constant args
 program = ["../push_swap"]
