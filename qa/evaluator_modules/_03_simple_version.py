@@ -1,6 +1,6 @@
 import subprocess
 
-def	tiny_sort(program, valgrind, valgrind_check, colours):
+def	simple_version(program, valgrind, valgrind_check, colours):
 
 	# Definig args
 	all_tiny_sort_args = [["1", "3", "2"], ["2", "1", "3"], ["2", "3", "1"], ["3", "1", "2"], ["3", "2", "1"]]

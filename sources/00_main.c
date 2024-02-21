@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/20 12:08:19 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/21 11:23:42 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		push_baby_moves(&a, &b);
 		push_safe_exit(0, &a, &b, &bst);
 	}
-	push_only_swap_sort(&a, &b, &bst);
+	push_only_swap_or_tiny_sort(&a, &b, &bst);
 	push_all_save_three(&a, &b);
 	push_tiny_sort(&a);
 	if (DEBUG == 4) // _04_pre_sort.py

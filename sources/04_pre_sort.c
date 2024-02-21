@@ -46,11 +46,16 @@ void	push_tiny_sort(t_list_push **a)
 		push_gateway(SA, a, NULL);
 }
 
-void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst)
+void	push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst)
 {
 	if (push_lstsize(*a) == 2)
 	{
 		push_gateway(SA, a, NULL);
+		push_safe_exit(0, a, b, bst);
+	}
+	else if (push_lstsize(*a) == 3)
+	{
+		push_tiny_sort(a);
 		push_safe_exit(0, a, b, bst);
 	}
 }

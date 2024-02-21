@@ -4,6 +4,7 @@ import subprocess
 
 from evaluator_modules import _01_error_management
 from evaluator_modules import _02_identity_test
+from evaluator_modules import _03_simple_version
 
 # Constant args
 program = ["../push_swap"]
@@ -30,6 +31,11 @@ print("\n")
 # Identity test
 print("Identity test")
 _02_identity_test.identity_test(program, valgrind, valgrind_check, colours)
+print("\n")
+
+# Simple version
+print("Simple version")
+_03_simple_version.simple_version(program, valgrind, valgrind_check, colours)
 print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)

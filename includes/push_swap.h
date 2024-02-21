@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/20 12:11:56 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/21 11:25:22 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ t_list_push	*push_lst_n_1(t_list_push *lst);
 // 04_pre_sort.c
 void	push_all_save_three(t_list_push **a, t_list_push **b);
 void	push_tiny_sort(t_list_push **a);
-void	push_only_swap_sort(t_list_push **a, t_list_push **b, t_bst **bst);
+void	push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst);
 
 // 05_target_position.c
 int		push_target_comp(int b_index, t_list_push *a);
