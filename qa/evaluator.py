@@ -6,6 +6,7 @@ from evaluator_modules import _01_error_management
 from evaluator_modules import _02_identity_test
 from evaluator_modules import _03_simple_version
 from evaluator_modules import _04_another_simple_version
+from evaluator_modules import _05_middle_version
 
 # Constant args
 program = ["../push_swap"]
@@ -42,6 +43,11 @@ print("\n")
 # Another simple version
 print("Another simple version")
 _04_another_simple_version.another_simple_version(program, valgrind, valgrind_check, colours)
+print("\n")
+
+# Middle version
+print("Middle version")
+_05_middle_version.middle_version(program, valgrind, valgrind_check, colours)
 print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
