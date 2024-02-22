@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 15:41:10 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:05:43 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,34 +64,34 @@ void		push_lst_indexing(t_list_push *a, t_bst *bst);
 
 // 03_moves.c
 void		push_baby_moves(t_list_push **a, t_list_push **b);
-void		push_gateway(int op, t_list_push **a, t_list_push **b);
-void		push_do_sx(t_list_push **stack, char *sx);
+void		push_gateway(enum e_op op, t_list_push **a, t_list_push **b);
 void		push_lstprintf_value(t_list_push *lst);
 void		push_lstadd_front(t_list_push **lst, t_list_push *new);
+t_list_push	*push_lst_n_1(t_list_push *lst);
+
+// 03_do_moves.c
+void		push_do_sx(t_list_push **stack, char *sx);
 void		push_do_rrx(t_list_push **stack, char *rrx);
 void		push_do_rx(t_list_push **stack, char *rx);
 void		push_do_px(t_list_push **src, t_list_push **dest, char *px);
-void		push_do_rrr(t_list_push **a, t_list_push **b, char *rrr);
-void		push_do_rr(t_list_push **a, t_list_push **b, char *rr);
-void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
-t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 04_pre_sort.c
 void		push_all_save_three(t_list_push **a, t_list_push **b);
 void		push_tiny_sort(t_list_push **a);
-void		push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst);
+void		push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b,
+				t_bst **bst);
 
 // 05_target_position.c
-int		push_target_comp(int b_index, t_list_push *a);
-int		push_target_min(t_list_push *a);
-void	push_target_pos(t_list_push *a, t_list_push *b);
-void	push_get_positon(t_list_push *node);
+void		push_target_pos(t_list_push *a, t_list_push *b);
+int			push_target_comp(int b_index, t_list_push *a);
+int			push_target_min(t_list_push *a);
+void		push_get_positon(t_list_push *node);
 
 // 06_comp_cost.c
-void	push_comp_cost(t_list_push *a, t_list_push *b);
+void		push_comp_cost(t_list_push *a, t_list_push *b);
 
 // 07_cheapest_move.c
-void	push_cheapest_move(t_list_push *b, int *rotations);
+void		push_cheapest_move(t_list_push *b, int *rotations);
 
 // 08_sort.c
 void	push_sort(t_list_push **a, t_list_push **b, int *rotations);
@@ -125,6 +125,10 @@ t_list_push	*push_lstnew(int nbr);
 void		push_lstadd_back(t_list_push **lst, t_list_push *new);
 t_list_push	*push_lstlast(t_list_push *lst);
 
+// 97_utils.c
+void		push_do_rrr(t_list_push **a, t_list_push **b, char *rrr);
+void		push_do_rr(t_list_push **a, t_list_push **b, char *rr);
+void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 
 // 96_utils.c
 int		push_is_sorted(t_list_push *node);
