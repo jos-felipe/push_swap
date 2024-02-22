@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 19:48:30 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:57:30 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	push_user_input_validation_split(int *argc, char ***argv)
 {
 	char	*str_holder;
 
-	if (push_count_words((*argv)[1], ' ') == 1)
+	if (push_count_words((*argv)[1], ' ') <= 1)
 		return ;
 	else
 	{
