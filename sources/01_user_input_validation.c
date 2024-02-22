@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 10:44:24 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:47:07 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,6 @@ void	push_user_input_validation_split(int *argc, char ***argv)
 	{
 		str_holder = ft_strjoin("placeholder ", (*argv)[1]);
 		*argc = push_count_words(str_holder, ' ');
-		*argv = ft_split(str_holder, ' ');	
+		*argv = ft_split(str_holder, ' ');
 	}
 }
