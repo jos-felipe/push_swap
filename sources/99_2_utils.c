@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:00:39 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 15:01:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:38:38 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,11 @@ void	push_free_split(char **split)
 		}
 		free(split);
 	}
+}
+
+void	push_error(t_bst **head)
+{
+	ft_putstr_fd("Error\n", 2);
+	bst_free_all(*head);
+	exit(1);
 }
