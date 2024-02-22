@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/21 18:01:28 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:29:02 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	bst = NULL;
 	a = NULL;
 	b = NULL;
+	push_pre_user_input_validation(&argc, &argv);
 	push_user_input_validation(argc, argv, &bst);
 	if (DEBUG == 1) // _01_user_input_validation.py
 		push_safe_exit(0, &a, &b, &bst);

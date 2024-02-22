@@ -6,11 +6,17 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/07 09:34:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:44:24 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	push_pre_user_input_validation(int *argc, char ***argv)
+{
+	if (*argc == 2)
+		push_user_input_validation_split(argc, argv);
+}
 
 void push_user_input_validation(int argc, char *argv[], t_bst **bst)
 {
@@ -59,4 +65,19 @@ t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_insert
 		node->left_child = bst_insert_ps(head, node->left_child, insert_key, was_inserted);
 	}
 	return (node);
+}
+
+
+void	push_user_input_validation_split(int *argc, char ***argv)
+{
+	char	*str_holder;
+	
+	if (push_count_words((*argv)[1], ' ') == 1)
+		return ;
+	else
+	{
+		str_holder = ft_strjoin("placeholder ", (*argv)[1]);
+		*argc = push_count_words(str_holder, ' ');
+		*argv = ft_split(str_holder, ' ');	
+	}
 }

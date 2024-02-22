@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/21 11:25:22 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:40:17 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ typedef struct s_list_push
 void 	push_user_input_validation(int argc, char *argv[], t_bst **bst);
 void	ft_int(int argc, char *argv[], t_bst **bst);
 t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_inserted);
+void	push_pre_user_input_validation(int *argc, char ***argv);
+void	push_user_input_validation_split(int *argc, char ***argv);
 
 // 02_indexing.c
 void	push_fill_stack(t_list_push **a, int argc, char *argv[]);
@@ -120,6 +122,7 @@ void	ft_xt_go_horse(char *str);
 void	ft_error(t_bst **head);
 int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
+int		push_count_words(char const *s, char sep);
 
 // 98_utils.c
 void	push_lstprintf_index(t_list_push *lst);
