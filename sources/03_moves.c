@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   03_moves.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 15:03:18 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/02/22 15:04:18 by gfantoni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-void	push_baby_moves(t_list_push **a, t_list_push **b)
+void	push_baby_moves(t_list_push **a, t_list_push **b) // REMOVE BEFORE GRADE
 {
 	int	i;
 
@@ -47,7 +59,7 @@ void	push_gateway(int op, t_list_push **a, t_list_push **b)
 	else if (op == SB)
 		push_do_sx(b, "sb");
 	else if (op == SS)
-		push_do_ss(a, b,"ss");
+		push_do_ss(a, b, "ss");
 	else if (op == RA)
 		push_do_rx(a, "ra");
 	else if (op == RB)

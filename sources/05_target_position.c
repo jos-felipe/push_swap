@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   05_target_position.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 15:04:50 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/02/22 15:04:51 by gfantoni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	push_target_pos(t_list_push *a, t_list_push *b)
@@ -36,7 +48,7 @@ int	push_target_comp(int b_index, t_list_push *a)
 	a = temp;
 	if (a_min == INT_MAX)
 		pos = push_target_min(a);
-	return(pos);
+	return (pos);
 }
 
 int	push_target_min(t_list_push *a)
@@ -44,9 +56,8 @@ int	push_target_min(t_list_push *a)
 	int	a_min;
 	int	a_index;
 	int	pos;
-	
+
 	a_min = INT_MAX;
-	
 	while (a)
 	{
 		a_index = a->index;
