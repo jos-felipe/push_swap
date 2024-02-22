@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   06_comp_cost.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 14:57:55 by josfelip          #+#    #+#             */
+/*   Updated: 2024/02/22 14:58:22 by josfelip         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	push_comp_cost(t_list_push *a, t_list_push *b)
 {
-	t_list_push *temp;
-	int	lstsize_a;
-	int	lstsize_b;
+	t_list_push	*temp;
+	int			lstsize_a;
+	int			lstsize_b;
 
 	lstsize_a = push_lstsize(a);
 	lstsize_b = push_lstsize(b);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   98_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/19 12:48:48 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 14:54:54 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ t_list_push	*push_lstlast(t_list_push *lst)
 void	push_lstprintf_index(t_list_push *lst)
 {
 	int	index;
-	
+
 	while (lst)
 	{
 		index = lst->index;

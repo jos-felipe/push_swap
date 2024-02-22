@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   04_pre_sort.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 14:55:22 by josfelip          #+#    #+#             */
+/*   Updated: 2024/02/22 14:56:49 by josfelip         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	push_all_save_three(t_list_push **a, t_list_push **b)
 {
-	int stack_size;
+	int	stack_size;
 	int	pushed;
 	int	i;
 
@@ -31,11 +43,11 @@ void	push_all_save_three(t_list_push **a, t_list_push **b)
 
 void	push_tiny_sort(t_list_push **a)
 {
-	int first;
-	int second;
-	int third;
+	int	first;
+	int	second;
+	int	third;
 
-	first = (*a)->index; 
+	first = (*a)->index;
 	second = (*a)->next->index;
 	third = (*a)->next->next->index;
 	if (second > first && second > third)
@@ -46,7 +58,9 @@ void	push_tiny_sort(t_list_push **a)
 		push_gateway(SA, a, NULL);
 }
 
-void	push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst)
+void	push_only_swap_or_tiny_sort(t_list_push **a, \
+									t_list_push **b, \
+									t_bst **bst)
 {
 	if (push_lstsize(*a) == 2)
 	{
