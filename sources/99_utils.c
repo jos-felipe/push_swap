@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:34:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 10:09:38 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 12:13:16 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,4 +137,21 @@ int	push_count_words(char const *s, char sep)
 			++s;
 	}
 	return (word_count);
+}
+
+void	push_free_split(char **split)
+{
+	int	i;
+	
+	if (ft_strncmp("placeholder", split[0], 11) == 0)
+	{
+		i = 0;
+		while (split[i])
+		{
+			free(split[i]);
+			i++;
+		}
+		free(split);	
+	}
+
 }

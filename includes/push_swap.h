@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 10:40:17 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 12:06:53 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,7 @@ void	ft_error(t_bst **head);
 int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
 int		push_count_words(char const *s, char sep);
+void	push_free_split(char **split);
 
 // 98_utils.c
 void	push_lstprintf_index(t_list_push *lst);
