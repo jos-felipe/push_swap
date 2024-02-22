@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 12:06:53 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:41:10 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <unistd.h>
 # include <limits.h>
 
-enum operations
+enum e_op
 {
 	SA,
 	SB,
@@ -39,32 +39,28 @@ enum operations
 
 typedef struct s_list_push
 {
-	int				value;
-	int				index;
-	int				position;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
+	int					value;
+	int					index;
+	int					position;
+	int					target_pos;
+	int					cost_a;
+	int					cost_b;
 	struct s_list_push	*next;
 }	t_list_push;
 
-
 // 01_user_input_validation.c
-void 	push_user_input_validation(int argc, char *argv[], t_bst **bst);
-void	ft_int(int argc, char *argv[], t_bst **bst);
-t_bst	*bst_insert_ps(t_bst **head, t_bst *node, int insert_key, bool *was_inserted);
-void	push_pre_user_input_validation(int *argc, char ***argv);
-void	push_user_input_validation_split(int *argc, char ***argv);
+void		push_user_input_validation(int argc, char *argv[], t_bst **bst);
+void		ft_int(int argc, char *argv[], t_bst **bst);
+t_bst		*push_bst_insert(t_bst **head, t_bst *node,
+				int insert_key, bool *was_inserted);
+void		push_user_input_validation_split(int *argc, char ***argv);
+void		push_pre_user_input_validation(int *argc, char ***argv);
 
 // 02_indexing.c
-void	push_fill_stack(t_list_push **a, int argc, char *argv[]);
-void	push_bst_indexing(t_bst **bst, t_list_push **a);
-void	bst_in_order_static(t_bst *node, int index);
-t_list_push	*push_lstnew(int nbr);
-void	push_lstadd_back(t_list_push **lst, t_list_push *new);
-t_list_push	*push_lstlast(t_list_push *lst);
-void	bst_in_order_print_index(t_bst *node);
-void	push_lst_indexing(t_list_push *a, t_bst *bst);
+void		push_fill_stack(t_list_push **a, int argc, char *argv[]);
+void		push_bst_indexing(t_bst **bst, t_list_push **a);
+void		bst_in_order_static(t_bst *node, int index);
+void		push_lst_indexing(t_list_push *a, t_bst *bst);
 
 // 03_moves.c
 void		push_baby_moves(t_list_push **a, t_list_push **b);
@@ -81,9 +77,9 @@ void		push_do_ss(t_list_push **a, t_list_push **b, char *ss);
 t_list_push	*push_lst_n_1(t_list_push *lst);
 
 // 04_pre_sort.c
-void	push_all_save_three(t_list_push **a, t_list_push **b);
-void	push_tiny_sort(t_list_push **a);
-void	push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst);
+void		push_all_save_three(t_list_push **a, t_list_push **b);
+void		push_tiny_sort(t_list_push **a);
+void		push_only_swap_or_tiny_sort(t_list_push **a, t_list_push **b, t_bst **bst);
 
 // 05_target_position.c
 int		push_target_comp(int b_index, t_list_push *a);
@@ -118,8 +114,6 @@ void	push_safe_exit(	int status, \
 						t_bst **bst);
 void	push_lstclear(t_list_push **lst);
 long	ft_atol(const char *nptr);
-void	ft_xt_go_horse(char *str);
-void	ft_error(t_bst **head);
 int		ft_int_overflow(long nbr);
 int		only_digit(char *str);
 int		push_count_words(char const *s, char sep);
@@ -127,6 +121,10 @@ void	push_free_split(char **split);
 
 // 98_utils.c
 void	push_lstprintf_index(t_list_push *lst);
+t_list_push	*push_lstnew(int nbr);
+void		push_lstadd_back(t_list_push **lst, t_list_push *new);
+t_list_push	*push_lstlast(t_list_push *lst);
+
 
 // 96_utils.c
 int		push_is_sorted(t_list_push *node);

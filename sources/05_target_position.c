@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   05_target_position.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:04:50 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 15:04:51 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:25:06 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	push_target_pos(t_list_push *a, t_list_push *b)
 
 int	push_target_comp(int b_index, t_list_push *a)
 {
-	int	a_index;
-	int a_min;
-	int	pos;
+	int			a_index;
+	int			a_min;
+	int			pos;
 	t_list_push	*temp;
 
 	a_min = INT_MAX;

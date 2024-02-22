@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   03_moves.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:03:18 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 15:04:18 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:30:44 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	push_baby_moves(t_list_push **a, t_list_push **b) // REMOVE BEFORE GRADE
 	push_lstprintf_value(*b);
 }
 
-void	push_gateway(int op, t_list_push **a, t_list_push **b)
+void	push_gateway(enum e_op op, t_list_push **a, t_list_push **b)
 {
 	if (op == SA)
 		push_do_sx(a, "sa");

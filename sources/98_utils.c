@@ -5,12 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 11:38:46 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 14:54:54 by josfelip         ###   ########.fr       */
+/*   Created: 2024/02/22 14:54:54 by josfelip          #+#    #+#             */
+/*   Updated: 2024/02/22 15:40:08 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
 
 t_list_push	*push_lstnew(int nbr)
 {
