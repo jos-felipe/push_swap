@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   02_indexing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:05:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 14:53:59 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:19:52 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ void	push_lst_indexing(t_list_push *a, t_bst *bst)
 
 void	push_bst_indexing(t_bst **bst, t_list_push **a)
 {
-	bst_in_order_static(*bst, 0);
+	push_bst_in_order_static(*bst, 0);
 	a = NULL;
 	return ;
 }
 
-void	bst_in_order_static(t_bst *node, int layer)
+void	push_bst_in_order_static(t_bst *node, int layer)
 {
 	static int	index;
 
@@ -65,8 +65,8 @@ void	bst_in_order_static(t_bst *node, int layer)
 		index = 1;
 	if (node == NULL)
 		return ;
-	bst_in_order_static(node->left_child, layer + 1);
+	push_bst_in_order_static(node->left_child, layer + 1);
 	node->index = index;
 	index++;
-	bst_in_order_static(node->right_child, layer + 1);
+	push_bst_in_order_static(node->right_child, layer + 1);
 }

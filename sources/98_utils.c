@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   98_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:54:54 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 15:40:08 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:21:57 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/push_swap.h"
 
 t_list_push	*push_lstnew(int nbr)
 {

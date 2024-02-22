@@ -6,19 +6,19 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:11 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 12:07:06 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:30:45 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_bst		*bst;
 	t_list_push	*a;
 	t_list_push	*b;
 	int			rotations[2];
-	
+
 	bst = NULL;
 	a = NULL;
 	b = NULL;
