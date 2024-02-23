@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   07_cheapest_move.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 15:05:33 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/02/22 15:05:45 by gfantoni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	push_cheapest_move(t_list_push *b, int *rotations)
 {
-	t_list_push *temp;
+	t_list_push	*temp;
 	int			total_cost;
-	
+
 	temp = b;
 	total_cost = INT_MAX;
 	while (b)

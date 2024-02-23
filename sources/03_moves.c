@@ -1,53 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   03_moves.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 15:03:18 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/02/23 12:16:58 by josfelip         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-void	push_baby_moves(t_list_push **a, t_list_push **b)
-{
-	int	i;
-
-	push_gateway(RRA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(RA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(SA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(SA, a, b);
-	push_lstprintf_value(*a);
-	i = 0;
-	while (i++ < 6)
-		push_gateway(PB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(RB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(RRB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(SB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(SB, a, b);
-	push_lstprintf_value(*b);
-	i = 0;
-	while (i++ < 3)
-		push_gateway(PA, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(RR, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(RRR, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(SS, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-}
-
-void	push_gateway(int op, t_list_push **a, t_list_push **b)
+void	push_gateway(enum e_op op, t_list_push **a, t_list_push **b)
 {
 	if (op == SA)
 		push_do_sx(a, "sa");
 	else if (op == SB)
 		push_do_sx(b, "sb");
 	else if (op == SS)
-		push_do_ss(a, b,"ss");
+		push_do_ss(a, b, "ss");
 	else if (op == RA)
 		push_do_rx(a, "ra");
 	else if (op == RB)

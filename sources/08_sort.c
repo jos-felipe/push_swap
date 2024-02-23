@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   08_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 14:59:22 by josfelip          #+#    #+#             */
+/*   Updated: 2024/02/22 15:00:19 by josfelip         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	push_sort(t_list_push **a, t_list_push **b, int *rotations)
 {
-	int rot_a;
-	int rot_b;
-	unsigned int bitshift;
+	int				rot_a;
+	int				rot_b;
+	unsigned int	bitshift;
 
 	rot_a = rotations[0];
 	rot_b = rotations[1];
@@ -40,7 +52,7 @@ void	push_double_rotation(t_list_push **a, t_list_push **b, int *rotations)
 void	push_single_rot_a(t_list_push **a, int *rotation)
 {
 	int	i;
-	
+
 	i = -1;
 	if (*rotation < 0)
 		i = +1;
@@ -57,7 +69,7 @@ void	push_single_rot_a(t_list_push **a, int *rotation)
 void	push_single_rot_b(t_list_push **b, int *rotation)
 {
 	int	i;
-	
+
 	i = -1;
 	if (*rotation < 0)
 		i = +1;

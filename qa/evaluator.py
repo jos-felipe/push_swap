@@ -8,6 +8,8 @@ from evaluator_modules import _03_simple_version
 from evaluator_modules import _04_another_simple_version
 from evaluator_modules import _05_middle_version
 from evaluator_modules import _06_advanced_version
+from evaluator_modules import _07_nothing_on_string
+from evaluator_modules import _08_only_space_on_string
 
 # Constant args
 program = ["../push_swap"]
@@ -54,6 +56,16 @@ print("\n")
 # Advanced version
 print("Advanced version")
 _06_advanced_version.advanced_version(program, valgrind, valgrind_check, colours)
+print("\n")
+
+# Nothing on string
+print("Nothing on string")
+_07_nothing_on_string.nothing_on_string(program, valgrind, valgrind_check, colours)
+print("\n")
+
+# Only space on string
+print("Only space on string")
+_08_only_space_on_string.only_space_on_string(program, valgrind, valgrind_check, colours)
 print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)

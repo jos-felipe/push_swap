@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 12:08:41 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/20 12:35:11 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:03:11 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push_dial(t_list_push **a)
 {
-	int half;
+	int	half;
 
 	half = push_lstsize(*a) / 2;
 	while ((*a)->index != 1)
