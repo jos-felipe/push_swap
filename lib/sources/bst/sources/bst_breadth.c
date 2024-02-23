@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   breadth.c                                          :+:      :+:    :+:   */
+/*   bst_breadth.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:03:23 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/29 10:36:15 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/23 14:22:29 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	bst_simple_print(t_bst *node, int depth)
 }
 
 void	bst_breadth_first(t_bst *node)
-{	
+{
 	t_bst	**queue;
 	int		total;
 	int		front;

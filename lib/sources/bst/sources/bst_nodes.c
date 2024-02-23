@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bst_nodes.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/01 19:38:32 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/23 14:22:59 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_bst	*bst_insert(t_bst *node, int insert_key, bool *was_inserted)
 	{
 		node->left_child
 			= bst_insert(node->left_child, insert_key, was_inserted);
-	}	
+	}
 	return (node);
 }
 
@@ -66,7 +66,7 @@ t_bst	*bst_delete_node(t_bst *node, int delete_key, bool *was_deleted)
 			return (right_child_null(node, was_deleted));
 		else
 			return (left_right_child(node, was_deleted));
-	}		
+	}
 	return (node);
 }
 
