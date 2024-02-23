@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:06:28 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 12:21:37 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/23 17:05:50 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	push_swap(t_list_push **a, t_list_push **b, int *rotations)
 		push_cheapest_move(*b, rotations);
 		push_sort(a, b, rotations);
 	}
-	push_dial(&a);
+	push_dial(a);
 }
