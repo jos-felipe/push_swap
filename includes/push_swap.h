@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 19:38:26 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/23 12:17:15 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void		push_bst_indexing(t_bst **bst, t_list_push **a);
 void		push_bst_in_order_static(t_bst *node, int index);
 
 // 03_moves.c
-void		push_baby_moves(t_list_push **a, t_list_push **b);
 void		push_gateway(enum e_op op, t_list_push **a, t_list_push **b);
 void		push_lstadd_front(t_list_push **lst, t_list_push *new);
 t_list_push	*push_lst_n_1(t_list_push *lst);

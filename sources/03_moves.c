@@ -6,51 +6,11 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:03:18 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 15:30:44 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/23 12:16:58 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	push_baby_moves(t_list_push **a, t_list_push **b) // REMOVE BEFORE GRADE
-{
-	int	i;
-
-	push_gateway(RRA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(RA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(SA, a, b);
-	push_lstprintf_value(*a);
-	push_gateway(SA, a, b);
-	push_lstprintf_value(*a);
-	i = 0;
-	while (i++ < 6)
-		push_gateway(PB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(RB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(RRB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(SB, a, b);
-	push_lstprintf_value(*b);
-	push_gateway(SB, a, b);
-	push_lstprintf_value(*b);
-	i = 0;
-	while (i++ < 3)
-		push_gateway(PA, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(RR, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(RRR, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-	push_gateway(SS, a, b);
-	push_lstprintf_value(*a);
-	push_lstprintf_value(*b);
-}
 
 void	push_gateway(enum e_op op, t_list_push **a, t_list_push **b)
 {
