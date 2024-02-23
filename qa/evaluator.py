@@ -10,6 +10,7 @@ from evaluator_modules import _05_middle_version
 from evaluator_modules import _06_advanced_version
 from evaluator_modules import _07_nothing_on_string
 from evaluator_modules import _08_only_space_on_string
+from evaluator_modules import _00_preparing_environment
 
 # Constant args
 program = ["../push_swap"]
@@ -27,6 +28,11 @@ clean = ["make", "clean", "-C", "../"]
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 make = ["make", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+# Preparing environment
+print("Preparing environment")
+_00_preparing_environment.preparing_environment()
+print("\n")
 
 # Error management test
 print("Error management")
