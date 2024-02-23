@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   09_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:06:28 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 12:21:37 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/23 17:43:54 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	push_swap(t_list_push **a, t_list_push **b, int *rotations)
 		push_cheapest_move(*b, rotations);
 		push_sort(a, b, rotations);
 	}
-	push_dial(&a);
+	push_dial(a);
 }
