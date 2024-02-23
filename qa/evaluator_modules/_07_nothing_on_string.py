@@ -1,20 +1,19 @@
 import subprocess
 
-def	space_on_list(program, valgrind, valgrind_check, colours):
+def	nothing_on_string(program, valgrind, valgrind_check, colours):
 
 	# Definig args
 	program_shell_true = program[0]
 	valgrind_shell_true = valgrind[0] + ' ' + valgrind[1] + ' ' + valgrind[2] + ' ' + valgrind[3]
-	arg_shell_true = "' '"
+	arg_shell_true = "''"
 
 	# Output ref
-	output_ref = "Error\n"
+	output_ref = ""
 
 	# Run normal 
 	cmd_shell_true = program_shell_true + ' ' + arg_shell_true
-	output = subprocess.run(cmd_shell_true, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, shell=True)
-	output = output.stderr
-
+	output = subprocess.run(cmd_shell_true, stdout=subprocess.PIPE, text=True, shell=True)
+	output = output.stdout
 
 	# Valgrind
 	cmd_val_shell_true = valgrind_shell_true + ' ' + program_shell_true + ' ' + arg_shell_true
