@@ -1,6 +1,6 @@
 import subprocess
 
-def	only_space_on_string(program, valgrind, valgrind_check, colours):
+def	only_space_on_string(program, valgrind, valgrind_check, colours, exit_status):
 
 	# Definig args
 	program_shell_true = program[0]
@@ -26,7 +26,11 @@ def	only_space_on_string(program, valgrind, valgrind_check, colours):
 		print(f"{colours[0]}   OK  {colours[2]}")
 	else:
 		print(f"{colours[1]}   KO  {colours[2]}")
+		exit_status = 1
 	if valgrind_check in output_val:
 		print(f"{colours[0]}   MOK{colours[2]}")
 	else:
 		print(f"{colours[1]}   MKO{colours[2]}")
+		exit_status = 1
+
+	return (exit_status)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import subprocess
+import sys
 
 from evaluator_modules import _01_error_management
 from evaluator_modules import _02_identity_test
@@ -11,6 +12,9 @@ from evaluator_modules import _06_advanced_version
 from evaluator_modules import _07_nothing_on_string
 from evaluator_modules import _08_only_space_on_string
 from evaluator_modules import _00_preparing_environment
+
+# Exit Status
+exit_status = 0
 
 # Constant args
 program = ["../push_swap"]
@@ -36,42 +40,44 @@ print("\n")
 
 # Error management test
 print("Error management")
-_01_error_management.error_management(program, valgrind, valgrind_check, colours)
+exit_status = _01_error_management.error_management(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Identity test
 print("Identity test")
-_02_identity_test.identity_test(program, valgrind, valgrind_check, colours)
+exit_status = _02_identity_test.identity_test(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Simple version
 print("Simple version")
-_03_simple_version.simple_version(program, valgrind, valgrind_check, colours)
+exit_status = _03_simple_version.simple_version(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Another simple version
 print("Another simple version")
-_04_another_simple_version.another_simple_version(program, valgrind, valgrind_check, colours)
+exit_status = _04_another_simple_version.another_simple_version(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Middle version
 print("Middle version")
-_05_middle_version.middle_version(program, valgrind, valgrind_check, colours)
+exit_status = _05_middle_version.middle_version(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Advanced version
 print("Advanced version")
-_06_advanced_version.advanced_version(program, valgrind, valgrind_check, colours)
+exit_status = _06_advanced_version.advanced_version(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Nothing on string
 print("Nothing on string")
-_07_nothing_on_string.nothing_on_string(program, valgrind, valgrind_check, colours)
+exit_status = _07_nothing_on_string.nothing_on_string(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 # Only space on string
 print("Only space on string")
-_08_only_space_on_string.only_space_on_string(program, valgrind, valgrind_check, colours)
+exit_status = _08_only_space_on_string.only_space_on_string(program, valgrind, valgrind_check, colours, exit_status)
 print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+exit(exit_status)
