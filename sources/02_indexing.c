@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   02_indexing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:05:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 19:19:52 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/23 12:35:53 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	push_fill_stack(t_list_push **a, int argc, char *argv[])
 
 	i = 1;
 	while (i < argc)
-	{	
+	{
 		nbr = ft_atol(argv[i]);
 		push_lstadd_back(a, push_lstnew(nbr));
 		i++;
-	}	
+	}
 }
 
 int	push_bst_is_member(t_bst *node, int find_key)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/23 10:41:15 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/23 12:36:27 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 	was_inserted = false;
 	i = 1;
 	while (i < argc)
-	{	
+	{
 		if (!only_digit(argv[i]))
 			push_error(bst);
 		nbr = ft_atol(argv[i]);
@@ -43,7 +43,7 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 			push_safe_exit(1, NULL, NULL, bst);
 		(*bst) = push_bst_insert(bst, *bst, (int)nbr, &was_inserted);
 		i++;
-	}	
+	}
 }
 
 t_bst	*push_bst_insert(t_bst **head, t_bst *node, int key, bool *was_inserted)
