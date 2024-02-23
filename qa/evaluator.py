@@ -30,7 +30,7 @@ make = ["make", "-C", "../"]
 subprocess.run(make, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 # Preparing environment
-print("Preparing environment")
+print("\nPreparing environment")
 _00_preparing_environment.preparing_environment()
 print("\n")
 
