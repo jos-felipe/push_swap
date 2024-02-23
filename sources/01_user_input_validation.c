@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/22 19:57:30 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/23 10:41:15 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push_pre_user_input_validation(int *argc, char ***argv)
 {
-	if (*argc == 2 && (*argv)[1][0] != '\0')
+	if (*argc == 2)
 		push_user_input_validation_split(argc, argv);
 }
 
