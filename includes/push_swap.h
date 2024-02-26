@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/23 12:17:15 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/26 09:18:48 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void		push_pre_user_input_validation(int *argc, char ***argv);
 void		push_fill_stack(t_list_push **a, int argc, char *argv[]);
 int			push_bst_is_member(t_bst *node, int find_key);
 void		push_lst_indexing(t_list_push *a, t_bst *bst);
-void		push_bst_indexing(t_bst **bst, t_list_push **a);
+void		push_bst_indexing(t_bst **bst);
 void		push_bst_in_order_static(t_bst *node, int index);
 
 // 03_moves.c
