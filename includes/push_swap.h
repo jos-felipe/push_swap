@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/26 16:51:08 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 17:06:31 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include "../lib/includes/libft.h"
 # include "bst.h"
-
-// # include <stdlib.h>
-// # include <unistd.h>
-// # include <limits.h>
 
 enum e_op
 {
