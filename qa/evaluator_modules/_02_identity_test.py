@@ -1,6 +1,6 @@
 import subprocess
 
-def identity_test(program, valgrind, valgrind_check, colours):
+def identity_test(program, valgrind, valgrind_check, colours, exit_status):
 
 	# Creating args
 	battery = ["One arg ordered", "Two args ordered", "Four args ordered", "Nine args ordered"]
@@ -35,8 +35,12 @@ def identity_test(program, valgrind, valgrind_check, colours):
 			print(f"{colours[0]}{i + 1}. OK{colours[2]}")
 		else:
 			print(f"{colours[1]}{i + 1}. KO{colours[2]}")
+			exit_status = 1
 		if valgrind_check in err_val:
 			print(f"{colours[0]}   MOK\n{colours[2]}")
 		else:
 			print(f"{colours[1]}   MKO\n{colours[2]}")
+			exit_status = 1
 		i = i + 1
+
+		return (exit_status)

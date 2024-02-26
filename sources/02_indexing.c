@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   02_indexing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:05:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/23 12:35:53 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/26 09:18:20 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,9 @@ void	push_lst_indexing(t_list_push *a, t_bst *bst)
 	}
 }
 
-void	push_bst_indexing(t_bst **bst, t_list_push **a)
+void	push_bst_indexing(t_bst **bst)
 {
 	push_bst_in_order_static(*bst, 0);
-	a = NULL;
 	return ;
 }
 

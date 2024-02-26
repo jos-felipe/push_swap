@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:05:33 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/22 15:05:45 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 09:27:34 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	push_cheapest_move(t_list_push *b, int *rotations)
 {
-	t_list_push	*temp;
 	int			total_cost;
 
-	temp = b;
 	total_cost = INT_MAX;
 	while (b)
 	{
