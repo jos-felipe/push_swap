@@ -1,6 +1,6 @@
 NAME = bst.a
 
-CFLAGS	= -Wextra -Wall -Werror -g3
+CFLAGS	= -Wextra -Wall -Werror
 
 HEADERS	= -Iincludes
 
