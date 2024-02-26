@@ -6,21 +6,15 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/26 09:18:48 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 17:06:31 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# ifndef DEBUG
-#  define DEBUG 0
-# endif
-
 # include "../lib/includes/libft.h"
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
+# include "bst.h"
 
 enum e_op
 {
@@ -52,7 +46,7 @@ typedef struct s_list_push
 void		push_user_input_validation(int argc, char *argv[], t_bst **bst);
 void		ft_int(int argc, char *argv[], t_bst **bst);
 t_bst		*push_bst_insert(t_bst **head, t_bst *node,
-				int insert_key, bool *was_inserted);
+				int insert_key, int *was_inserted);
 void		push_user_input_validation_split(int *argc, char ***argv);
 void		push_pre_user_input_validation(int *argc, char ***argv);
 

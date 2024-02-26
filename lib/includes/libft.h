@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 13:02:21 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/31 11:16:16 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:49:34 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 
 # include "../sources/functions/includes/functions.h"
 # include "../sources/get_next_line/includes/get_next_line.h"
-# include "../sources/bst/includes/bst.h"
 
 #endif

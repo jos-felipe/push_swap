@@ -6,7 +6,7 @@
 #    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/21 18:00:55 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/26 16:53:46 by gfantoni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,14 @@ HEADER = $(HEADER_PATH)push_swap.h
 OBJ_PATH = ./obj/
 DEBUG_OBJ_PATH = ./obj_debug/
 SOURCES_PATH = ./sources/
-SOURCES = 00_main.c 01_user_input_validation.c 02_indexing.c 03_do_moves.c 03_moves.c 04_pre_sort.c 05_target_position.c 06_comp_cost.c 07_cheapest_move.c 08_sort.c 09_push_swap.c 10_dial.c 93_utils.c 94_utils.c 95_utils.c 96_utils.c 97_utils.c 98_utils.c 99_2_utils.c 99_utils.c
+SOURCES = 	00_main.c 01_user_input_validation.c 02_indexing.c 03_do_moves.c \
+			03_moves.c 04_pre_sort.c 05_target_position.c 06_comp_cost.c \
+			07_cheapest_move.c 08_sort.c 09_push_swap.c 10_dial.c 93_utils.c \
+			94_utils.c 95_utils.c 96_utils.c 97_utils.c 98_utils.c 99_2_utils.c \
+			99_utils.c \
+			bst_breadth.c bst_check_node.c bst_del_utils.c bst_min_max.c \
+			bst_nodes.c bst_traversal.c
+			
 MANDATORY_SOURCES = $(addprefix $(SOURCES_PATH), $(SOURCES))
 
 ifdef WITH_DEBUG

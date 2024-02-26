@@ -6,17 +6,17 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 14:22:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:34 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 t_bst	*bst_create_node(int new_key)
 {
 	t_bst	*new_node;
 
-	new_node = calloc(1, sizeof(t_bst));
+	new_node = ft_calloc(1, sizeof(t_bst));
 	new_node->key = new_key;
 	new_node->index = 0;
 	new_node->right_child = NULL;
@@ -24,12 +24,12 @@ t_bst	*bst_create_node(int new_key)
 	return (new_node);
 }
 
-t_bst	*bst_insert(t_bst *node, int insert_key, bool *was_inserted)
+t_bst	*bst_insert(t_bst *node, int insert_key, int *was_inserted)
 {
-	*was_inserted = false;
+	*was_inserted = FALSE;
 	if (node == NULL)
 	{
-		*was_inserted = true;
+		*was_inserted = TRUE;
 		return (bst_create_node(insert_key));
 	}
 	else if (insert_key > node->key)
@@ -45,9 +45,9 @@ t_bst	*bst_insert(t_bst *node, int insert_key, bool *was_inserted)
 	return (node);
 }
 
-t_bst	*bst_delete_node(t_bst *node, int delete_key, bool *was_deleted)
+t_bst	*bst_delete_node(t_bst *node, int delete_key, int *was_deleted)
 {
-	*was_deleted = false;
+	*was_deleted = FALSE;
 	if (node == NULL)
 		return (NULL);
 	if (delete_key > node->key)
