@@ -9,3 +9,5 @@ rm README.md
 rm LICENSE
 rm gfantoni.sh
 rm josfelip.sh
+rm checker_linux
+rm *.pdf
