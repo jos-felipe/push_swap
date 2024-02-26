@@ -52,7 +52,7 @@ typedef struct s_list_push
 void		push_user_input_validation(int argc, char *argv[], t_bst **bst);
 void		ft_int(int argc, char *argv[], t_bst **bst);
 t_bst		*push_bst_insert(t_bst **head, t_bst *node,
-				int insert_key, bool *was_inserted);
+				int insert_key, int *was_inserted);
 void		push_user_input_validation_split(int *argc, char ***argv);
 void		push_pre_user_input_validation(int *argc, char ***argv);
 

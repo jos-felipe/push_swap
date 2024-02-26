@@ -24,12 +24,12 @@ t_bst	*bst_create_node(int new_key)
 	return (new_node);
 }
 
-t_bst	*bst_insert(t_bst *node, int insert_key, bool *was_inserted)
+t_bst	*bst_insert(t_bst *node, int insert_key, int *was_inserted)
 {
-	*was_inserted = false;
+	*was_inserted = FALSE;
 	if (node == NULL)
 	{
-		*was_inserted = true;
+		*was_inserted = TRUE;
 		return (bst_create_node(insert_key));
 	}
 	else if (insert_key > node->key)
@@ -45,9 +45,9 @@ t_bst	*bst_insert(t_bst *node, int insert_key, bool *was_inserted)
 	return (node);
 }
 
-t_bst	*bst_delete_node(t_bst *node, int delete_key, bool *was_deleted)
+t_bst	*bst_delete_node(t_bst *node, int delete_key, int *was_deleted)
 {
-	*was_deleted = false;
+	*was_deleted = FALSE;
 	if (node == NULL)
 		return (NULL);
 	if (delete_key > node->key)

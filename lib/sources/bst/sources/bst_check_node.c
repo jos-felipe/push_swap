@@ -12,26 +12,26 @@
 
 #include "bst.h"
 
-bool	bst_verify(t_bst *node, int minkey, int maxkey)
+int	bst_verify(t_bst *node, int minkey, int maxkey)
 {
 	if (node == NULL)
-		return (true);
+		return (TRUE);
 	if (node->key < minkey || node->key > maxkey)
-		return (false);
+		return (FALSE);
 	return (bst_verify(node->left_child, minkey, node->key - 1)
 		&& bst_verify(node->right_child, node->key + 1, maxkey));
 }
 
-bool	bst_is_member(t_bst *node, int find_key)
+int	bst_is_member(t_bst *node, int find_key)
 {
 	if (node == NULL)
-		return (false);
+		return (FALSE);
 	else if (find_key > node->key)
 		return (bst_is_member(node->right_child, find_key));
 	else if (find_key < node->key)
 		return (bst_is_member(node->left_child, find_key));
 	else
-		return (true);
+		return (TRUE);
 }
 
 int	bst_num_nodes(t_bst *node)

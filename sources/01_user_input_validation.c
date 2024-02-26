@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_user_input_validation.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:43:20 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/23 12:36:27 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:19:09 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 {
 	int		i;
 	long	nbr;
-	bool	was_inserted;
+	int		was_inserted;
 
-	was_inserted = false;
+	was_inserted = FALSE;
 	i = 1;
 	while (i < argc)
 	{
@@ -46,12 +46,12 @@ void	ft_int(int argc, char *argv[], t_bst **bst)
 	}
 }
 
-t_bst	*push_bst_insert(t_bst **head, t_bst *node, int key, bool *was_inserted)
+t_bst	*push_bst_insert(t_bst **head, t_bst *node, int key, int *was_inserted)
 {
-	*was_inserted = false;
+	*was_inserted = FALSE;
 	if (node == NULL)
 	{
-		*was_inserted = true;
+		*was_inserted = TRUE;
 		return (bst_create_node(key));
 	}
 	if (key == node->key)
