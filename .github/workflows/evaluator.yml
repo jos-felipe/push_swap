@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: evaluator
-      run: cd qa && ./evaluator.py
+    - name: 42valgrind Leak checker
+      uses: solareenlo/42valgrind-action@v1.0.3
+      with:
+        flags: "cd qa && ./evaluator.py"
