@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   del_utils.c                                        :+:      :+:    :+:   */
+/*   bst_del_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 12:37:55 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/27 13:47:06 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:27 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 t_bst	*left_right_child_null(t_bst *node, int *was_deleted)
 {

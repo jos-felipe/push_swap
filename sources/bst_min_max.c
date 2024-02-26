@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:20:43 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 14:23:28 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:31 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 int	bst_find_minimum(t_bst *node)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_node.c                                       :+:      :+:    :+:   */
+/*   bst_check_node.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:25:54 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/27 13:46:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:23 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 int	bst_verify(t_bst *node, int minkey, int maxkey)
 {

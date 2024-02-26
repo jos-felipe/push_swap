@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:03:23 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/26 15:52:18 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:11 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 static void	bst_breadth(t_bst **queue, int front, int total, int rear);
 

@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/26 12:50:49 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:48:34 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bst.h"
+#include "../includes/bst.h"
 
 t_bst	*bst_create_node(int new_key)
 {

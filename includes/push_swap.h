@@ -6,21 +6,19 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:52:24 by josfelip          #+#    #+#             */
-/*   Updated: 2024/02/26 09:18:48 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:51:08 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# ifndef DEBUG
-#  define DEBUG 0
-# endif
-
 # include "../lib/includes/libft.h"
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
+# include "bst.h"
+
+// # include <stdlib.h>
+// # include <unistd.h>
+// # include <limits.h>
 
 enum e_op
 {

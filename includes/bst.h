@@ -6,15 +6,14 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:17:51 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/26 16:34:45 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 16:49:13 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BST_H
 # define BST_H
 
-//# include <limits.h>
-# include "../../functions/includes/functions.h"
+# include "../lib/includes/libft.h"
 
 # define TRUE 1
 # define FALSE 0
