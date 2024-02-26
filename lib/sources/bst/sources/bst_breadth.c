@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:03:23 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 14:22:29 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:52:18 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	bst_breadth_first(t_bst *node)
 	int		rear;
 
 	total = bst_num_nodes(node);
-	queue = calloc(total, sizeof(t_bst *));
+	queue = ft_calloc(total, sizeof(t_bst *));
 	front = 0;
 	rear = 1;
 	if (node == NULL)
