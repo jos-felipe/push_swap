@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bst.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:17:51 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/01 19:34:32 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:58:51 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BST_H
 # define BST_H
 
-# include <stdlib.h>
 # include <stdbool.h>
 # include <limits.h>
 # include "../../functions/includes/functions.h"

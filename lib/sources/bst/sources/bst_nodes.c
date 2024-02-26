@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 11:39:14 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/02/23 14:22:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:50:49 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_bst	*bst_create_node(int new_key)
 {
 	t_bst	*new_node;
 
-	new_node = calloc(1, sizeof(t_bst));
+	new_node = ft_calloc(1, sizeof(t_bst));
 	new_node->key = new_key;
 	new_node->index = 0;
 	new_node->right_child = NULL;
