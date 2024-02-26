@@ -80,4 +80,7 @@ print("\n")
 
 subprocess.run(clean, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
+if exit_status == 0:
+	print("🎉🎊🌟✨👏🎈🎈👏👏👏🎈🎈👏🌟✨🎉🎊\n")
+
 exit(exit_status)
