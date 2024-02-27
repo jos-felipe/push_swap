@@ -30,12 +30,12 @@ def	advanced_version(program, valgrind, valgrind_check, colours, exit_status):
 	
 	# Checking ref with outputs
 	if (output_checker == ref and output_moves <= max_moves):
-		print(f"{colours[0]}   OK  {colours[2]}")
+		print(f"{colours[0]}1/1.	OK  {colours[2]}")
 	else:
-		print(f"{colours[1]}   KO  {colours[2]}")
+		print(f"{colours[1]}1/1.	KO  {colours[2]}")
 		exit_status = 1
 	if valgrind_check in output_val:
-		print(f"{colours[0]}   MOK{colours[2]}")
+		print(f"{colours[0]}	MOK{colours[2]}")
 	else:
 		print(f"{colours[1]}   MKO{colours[2]}")
 		exit_status = 1

@@ -30,7 +30,7 @@ def	tiny_sort(program, valgrind, valgrind_check, colours):
 		else:
 			print(f"{colours[1]}{i}. KO  {colours[2]}")
 		if valgrind_check in out_val:
-			print(f"{colours[0]}   MOK{colours[2]}")
+			print(f"{colours[0]}	MOK{colours[2]}")
 		else:
 			print(f"{colours[1]}   MKO{colours[2]}")
 		i = i + 1

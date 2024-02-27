@@ -49,7 +49,7 @@ def user_input(program, valgrind, valgrind_check, colours):
 		else:
 			print(f"{colours[1]}{i + 1}. KO{colours[2]}")
 		if valgrind_check in err_val:
-			print(f"{colours[0]}   MOK\n{colours[2]}")
+			print(f"{colours[0]}	MOK\n{colours[2]}")
 		else:
 			print(f"{colours[1]}   MKO\n{colours[2]}")
 		i = i + 1
