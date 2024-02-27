@@ -34,6 +34,6 @@ def dial(program, valgrind, valgrind_check, colours):
 	else:
 		print(colours[1] + "1. KO" + colours[2])
 	if valgrind_check in err_val:
-		print(f"{colours[0]}   MOK{colours[2]}")
+		print(f"{colours[0]}	MOK{colours[2]}")
 	else:
 		print(f"{colours[1]}   MKO{colours[2]}")
