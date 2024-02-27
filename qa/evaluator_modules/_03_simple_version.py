@@ -46,4 +46,4 @@ def	simple_version(program, valgrind, valgrind_check, colours, exit_status):
 			exit_status = 1
 		i = i + 1
 
-		return (exit_status)
+	return (exit_status)
