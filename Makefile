@@ -3,15 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+         #
+#    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 11:03:46 by josfelip          #+#    #+#              #
-#    Updated: 2024/02/26 16:53:46 by gfantoni         ###   ########.fr        #
+#    Updated: 2024/02/29 11:46:22 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 DEBUG_NAME = push_swap_debug
+ifdef WITH_BONUS
+  NAME = checker
+  DEBUG_NAME = checker_debug
+endif
 CFLAGS = -Wall -Wextra -Werror
 DFLAGS = -g3
 
@@ -87,4 +91,4 @@ fclean: clean
 re: fclean
 	@make --no-print-directory
 
-.PHONY: all clean fclean re libft debug
+.PHONY: all clean fclean re libft debug bonus
