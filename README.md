@@ -3,7 +3,6 @@ This project involves sorting data on a stack, with a limited set of instruction
 
 Algorithm inspired by [Mia Combeau's implementation](https://github.com/mcombeau/push_swap)
 
-
 We developed two kinds of tests: \
 
 1. [One that consists of a competition among any chosen push_swap projects] (https://github.com/gfantonib/push_swap_battery_tester.git) \
