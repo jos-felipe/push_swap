@@ -5,5 +5,5 @@ Algorithm inspired by [Mia Combeau's implementation](https://github.com/mcombeau
 
 We have developed two types of tests:
 
-1. [One that consists of a competition among any chosen push_swap projects](https://github.com/gfantonib/push_swap_battery_tester.git) \
+1. [A competition among any chosen push_swap projects](https://github.com/gfantonib/push_swap_battery_tester.git) \
 2. [A tester built considering the PDF and the evaluation page](https://github.com/gfantonib/push_swap_evaluator.git)
